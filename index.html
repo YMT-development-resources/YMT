@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Landing Page - YMT Development Resources</title>
     <link rel="icon" type="image/png" sizes="64x64" href="ymt_icon.png">
     <style>
-
-
-
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #D8D9DA;
             color: #333;
             display: flex;
             flex-direction: column;
@@ -30,7 +27,6 @@
             width: 100%;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             z-index: 1000;
-            height: 70px;
             padding: 0 20px;
             box-sizing: border-box;
         }
@@ -53,7 +49,7 @@
         }
 
         header nav {
-            display: flex;
+            display: inline-block;
             gap: 20px;
             align-items: center;
         }
@@ -76,68 +72,79 @@
         }
 
         .main-content {
-            display: flex;
-            margin-top: 70px; /* Adjust to height of your header */
             flex: 1;
+            padding: 0 20px;
+            margin-top: 70px;
+            text-align: center;
         }
 
-        .content {
-            flex: 1;
-            padding: 20px;
+        .hero-section {
+            background: url('ymt_hero.jpg') no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero-section p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        .cta-button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
         }
 
         .adv {
-            background-color: aqua;
-            height: 350px;
-            margin-bottom: 100px;
-        }
-
-        .adv p {
-            text-align: center;
-            padding: 150px;
-        }
-
-        .aboutus h2 {
+            background-color: #fff;
+            padding: 50px 0;
             text-align: center;
         }
 
-        .aboutus div {
-            background-color: aquamarine;
-            max-width: 100%;
-            height: 200px;
-            margin-bottom: 70px;
+        .adv img {
+            width: 80%;
+            max-width: 800px;
+            height: auto;
         }
 
-        .aboutus div h3 {
-            text-align: center;
-            padding: 50px;
-        }
-
-        .aboutus div p {
+        .aboutus, .service, .career {
+            padding: 50px 20px;
             text-align: center;
         }
 
-        .service {
-            background-color: #eaff00;
-            padding: 20px;
-            margin-bottom: 70px;
-        }
-
-        .service h2 {
-            text-align: center;
+        .aboutus h2, .service h2, .career h2 {
+            font-size: 2em;
             margin-bottom: 20px;
         }
 
-        .service .card-container {
+        .card-container {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
         }
 
-        .service .card {
-            background-color: aquamarine;
-            width: 250px; /* Adjust width as needed */
+        .card {
+            background-color: #fff;
+            width: 300px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
             overflow: hidden;
@@ -146,44 +153,12 @@
             box-sizing: border-box;
         }
 
-        .service .card h3 {
+        .card h3 {
             margin: 0;
             margin-bottom: 10px;
         }
 
-        .service .card p {
-            margin: 0;
-        }
-
-        .career h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .career .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .career .card {
-            background-color: aquamarine;
-            width: 250px; /* Adjust width as needed */
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-            overflow: hidden;
-            text-align: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .career .card h3 {
-            margin: 0;
-            margin-bottom: 10px;
-        }
-
-        .career .card p {
+        .card p {
             margin: 0;
         }
 
@@ -196,68 +171,90 @@
             margin-top: auto;
         }
 
-        /* Media Queries for responsiveness */
         @media (max-width: 1024px) {
             header {
-                height: 60px;
-                padding: 0 5px;
+                padding: 0 15px;
+                height: auto;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
             }
+
+            header .logo {
+                margin-bottom: 10px;
+            }
+
             header img {
                 width: 80px;
             }
+
             header p {
                 font-size: 1em;
             }
+
+            header nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
             header a {
-                padding: 10px 15px;
-                line-height: 30px;
+                padding: 10px;
+                font-size: 0.9em;
             }
         }
 
         @media (max-width: 768px) {
             header {
-                height: 50px;
-                padding: 0 0px;
+                padding: 0 10px;
+                height: auto;
+                flex-direction: column;
+                align-items: flex-start;
             }
+
+            header .logo {
+                margin-bottom: 10px;
+            }
+
             header img {
                 width: 70px;
             }
+
             header p {
                 font-size: 0.9em;
             }
-            header nav {
-                gap: 10px;
-            }
-            header a {
-                padding: 8px 10px;
-                line-height: 20px;
-            }
-        }
 
-        @media (max-width: 480px) {
-            header {
-                height: 50px;
-                padding: 0 5px;
+            header nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
             }
-            header img {
-                width: 60px;
-            }
-            header p {
+
+            header a {
+                padding: 8px;
                 font-size: 0.8em;
             }
-            header a {
-                padding: 6px 8px;
-                line-height: 50px;
+
+            .hero-section h1 {
+                font-size: 2.5em;
             }
-            .service .card {
+
+            .hero-section p {
+                font-size: 1.2em;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+
+            .card {
                 width: 100%;
-                margin-bottom: 10px;
             }
         }
     </style>
 </head>
 <body>
-    
     <header>
         <div class="logo">
             <img src="ymt.tran.png" alt="Logo"/>
@@ -265,89 +262,125 @@
         </div>
         <nav>
             <a href="#home">Home</a>
-            <a href="#aboutus">About YMT</a>
+            <a href="#aboutus">About</a>
             <a href="#service">Services</a>
-            <a href="#career">Career</a>
+            <a href="#career">Careers</a>
             <a href="#footer">Contact</a>
         </nav>
     </header>
-    
+
     <div class="main-content">
+        <section id="home" class="hero-section">
+            <h1>Welcome to YMT Development Resources</h1>
+            <p>Empowering you to achieve your goals</p>
+            <a href="#aboutus" class="cta-button">Learn More</a>
+        </section>
 
-        <div class="content">
-            <section id="home">
-                <h1>Welcome to YMT Development Resources</h1>
-                <p>Your success starts here.</p>
-            </section>
-            
-            <section id="adv" class="adv">
-                <p><b>ADV</b></p>
-            </section>
-
-            <section id="aboutus" class="aboutus">
-                <h2><b>ABOUT YMT</b></h2>
-                <div class="history">
-                    <h3>History</h3>
-                    <p>Description of company background</p>
+        <section id="adv" class="adv">
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <img src="ymt_family.jpg" alt="Slide 1">
                 </div>
-            </section>
+                <div class="mySlides">
+                    <img src="slide2.jpg" alt="Slide 2">
+                </div>
+                <div class="mySlides">
+                    <img src="slide3.jpg" alt="Slide 3">
+                </div>
 
-            <section id="service" class="service">
-                <h2>Our Services</h2>
-                <div class="card-container">
-                    <div class="card">
-                        <h3>Childhood</h3>
-                        <p>For more details, please check </p>
-                        <a href="../YMT/service_part/childhood.html">more</a>
-                    </div>
-                    <div class="card">
-                        <h3>Adulthood</h3>
-                        <p>For more details, please check</p>
-                        <a href="../YMT/service_part/adulthood.html">more</a>
-                    </div>
-                    <div class="card">
-                        <h3>Old Age</h3>
-                        <p>For more details, please check</p>
-                        <a href="../YMT/service_part/old_age.html">more</a>
-                    </div>
-                    <div class="card">
-                        <h3>Service 4</h3>
-                        <p>For more details, please check more</p>
+                <div class="mySlides">
+                    <div class="video-container">
+                        <video id="myVideo" width="100%" controls>
+                            <source src="YMT-DEVELOPMENT-RESOURCES.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
-            </section>
 
-            <section id="career" class="career">
-                <h2><b>YMT CAREERS</b></h2>
-                <div class="card-container">
-                    <div class="card">
-                        <h3>Part Time</h3>
-                        <p>Details of</p>
-                        <a href="../YMT/career_part/parttime.html">Part Time</a>
-                    </div>
-                    <div class="card">
-                        <h3>Full Time</h3>
-                        <p>Details of </p>
-                        <a href="../YMT/career_part/fulltime.html">Full Time</a>
-                    </div>
-                    <div class="card">
-                        <h3>Internship</h3>
-                        <p>Details of </p>
-                        <a href="../YMT/career_part/internship.html">Internship</a>
-                    </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+
+        <section id="aboutus" class="aboutus">
+            <h2>About YMT Development Resources</h2>
+            <p>Learn more about our mission and values.</p>
+        </section>
+
+        <section id="service" class="service">
+            <h2>Our Services</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Children</h3>
+                    <p>Details about services for children.</p>
+                    <a href="../YMT/service_part/children.html">Learn More</a>
                 </div>
-            </section>
-        </div>
+                <div class="card">
+                    <h3>Adulthood</h3>
+                    <p>Details about services for adults.</p>
+                    <a href="../YMT/service_part/adulthood.html">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>Old Age</h3>
+                    <p>Details about services for the elderly.</p>
+                    <a href="../YMT/service_part/old_age.html">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>Service 4</h3>
+                    <p>Details about additional services.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="career" class="career">
+            <h2>Careers</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Part Time</h3>
+                    <p>Details about part-time opportunities.</p>
+                    <a href="../YMT/career_part/parttime.html">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>Full Time</h3>
+                    <p>Details about full-time positions.</p>
+                    <a href="../YMT/career_part/fulltime.html">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>Internship</h3>
+                    <p>Details about internship programs.</p>
+                    <a href="../YMT/career_part/internship.html">Learn More</a>
+                </div>
+            </div>
+        </section>
     </div>
     
     <footer id="footer">
         <div>
             <h2>Contact Us</h2>
+            <p>Get in touch with us for more information.</p>
         </div>
         <p>&copy; 2024 YMT Development Resources. All rights reserved.</p>
     </footer>
 
     <script>
+        var slideIndex = 0;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n >= slides.length) {slideIndex = 0}
+            if (n < 0) {slideIndex = slides.length - 1}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+        }
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -357,6 +390,5 @@
             });
         });
     </script>
-
 </body>
 </html>
