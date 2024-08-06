@@ -122,7 +122,7 @@
         }
 
         .adv img {
-            width: 100%;
+            width: 60%;
             height: auto;
             display: block;
         }
@@ -139,7 +139,7 @@
 
 
         .aboutus p {
-            text-align: justify;
+            text-align: center;
         }
 
         .card-container {
@@ -333,6 +333,48 @@
         .mySlides {
             display: none;
         }
+
+
+
+
+        /* Add this new style for the image container */
+.image-container {
+    text-align: center; /* Center the image horizontally */
+    max-width: 100%; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the container */
+}
+
+.image-container img {
+    width: 100%; /* Make the image fit within the container */
+    height: auto;
+}
+
+/* Adjust the slideshow container to handle the new image size */
+.slideshow-container {
+    position: relative;
+    max-width: 60%;
+    margin: 0 auto; /* Center the container */
+    overflow: hidden;
+}
+
+/* Adjust prev and next buttons */
+.prev, .next {
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust to align with smaller images */
+}
+
+@media (max-width: 1024px) {
+    .image-container {
+        max-width: 80%; /* Adjust max-width for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        max-width: 100%; /* Adjust max-width for smaller screens */
+    }
+}
+
     </style>
 </head>
 <body>
@@ -359,22 +401,28 @@
 
         <section id="adv" class="adv">
             <div class="slideshow-container">
-
+        
                 <div class="mySlides">
-                    <img src="ymt_family.jpg" alt="Slide 1">
+                    <div class="image-container">
+                        <img src="ymt_family.jpg" alt="Slide 1">
+                    </div>
                 </div>
                 <div class="mySlides">
-                    <img src="#" alt="Slide 2">
+                    <div class="image-container">
+                        <img src="#" alt="Slide 2">
+                    </div>
                 </div>
                 <div class="mySlides">
-                    <img src="slide3.jpg" alt="Slide 3">
+                    <div class="image-container">
+                        <img src="slide3.jpg" alt="Slide 3">
+                    </div>
                 </div>
-
+        
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
         </section>
-
+        
         <section id="aboutus" class="aboutus">
             <h2>About YMT Development Resources</h2>
             <p>"Our company takes「professionalism, quality, service and efficiency」as its business philosophy, 
