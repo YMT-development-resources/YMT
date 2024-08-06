@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #D8D9DA;
+            background-color: #C7C8CC;
             color: #333;
             display: flex;
             flex-direction: column;
@@ -27,7 +27,7 @@
             width: 100%;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             z-index: 1000;
-            padding: 0 20px;
+            padding: 20px;
             box-sizing: border-box;
         }
 
@@ -99,7 +99,7 @@
         }
 
         .cta-button {
-            background-color: #007bff;
+            background-color: #453d57;
             color: white;
             padding: 15px 30px;
             border: none;
@@ -110,19 +110,21 @@
         }
 
         .cta-button:hover {
-            background-color: #0056b3;
+            background-color: #2A2438;
         }
 
         .adv {
-            background-color: #fff;
-            padding: 50px 0;
+            background-size: cover;
+            background-position: center;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
         .adv img {
-            width: 80%;
-            max-width: 800px;
+            width: 100%;
             height: auto;
+            display: block;
         }
 
         .aboutus, .service, .career {
@@ -133,6 +135,16 @@
         .aboutus h2, .service h2, .career h2 {
             font-size: 2em;
             margin-bottom: 20px;
+        }
+
+        .aboutus h3 {
+            font-size: 24px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .aboutus p {
+            text-align: justify;
         }
 
         .card-container {
@@ -196,10 +208,11 @@
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 5px;
+                padding: 20px;
             }
 
             header a {
-                padding: 10px;
+                padding: 15px;
                 font-size: 0.9em;
             }
         }
@@ -228,10 +241,11 @@
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 5px;
+                padding: 8px;
             }
 
             header a {
-                padding: 8px;
+                padding: 5px;
                 font-size: 0.8em;
             }
 
@@ -251,6 +265,40 @@
             .card {
                 width: 100%;
             }
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 0px 3 3 0px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .mySlides {
+            display: none;
         }
     </style>
 </head>
@@ -273,28 +321,20 @@
         <section id="home" class="hero-section">
             <h1>Welcome to YMT Development Resources</h1>
             <p>Empowering you to achieve your goals</p>
-            <a href="#aboutus" class="cta-button">Learn More</a>
+            <a href="#adv" class="cta-button">Learn More</a>
         </section>
 
         <section id="adv" class="adv">
             <div class="slideshow-container">
+
                 <div class="mySlides">
                     <img src="ymt_family.jpg" alt="Slide 1">
                 </div>
                 <div class="mySlides">
-                    <img src="slide2.jpg" alt="Slide 2">
+                    <img src="#" alt="Slide 2">
                 </div>
                 <div class="mySlides">
                     <img src="slide3.jpg" alt="Slide 3">
-                </div>
-
-                <div class="mySlides">
-                    <div class="video-container">
-                        <video id="myVideo" width="100%" controls>
-                            <source src="YMT-DEVELOPMENT-RESOURCES.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
                 </div>
 
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -304,7 +344,10 @@
 
         <section id="aboutus" class="aboutus">
             <h2>About YMT Development Resources</h2>
-            <p>Learn more about our mission and values.</p>
+            <h3>Philosophy</h3>
+            <p>"Our company takes「professionalism, quality, service and efficiency」as its business philosophy, 
+                not only demanding 「precision」,「good」and 「fast」,
+                but also adhering to the spirit of 「honesty first and service first to do a good job in various services.」"</p>
         </section>
 
         <section id="service" class="service">
@@ -364,11 +407,7 @@
 
     <script>
         var slideIndex = 0;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
+        var timer;
 
         function showSlides(n) {
             var i;
@@ -379,7 +418,21 @@
                 slides[i].style.display = "none";
             }
             slides[slideIndex].style.display = "block";
+            clearTimeout(timer);
+            timer = setTimeout(autoSlides, 6000);
         }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function autoSlides() {
+            slideIndex++;
+            showSlides(slideIndex);
+        }
+
+        showSlides(slideIndex);
+        autoSlides();
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
