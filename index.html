@@ -7,16 +7,18 @@
     <link rel="icon" type="image/png" sizes="64x64" href="ymt_icon.png">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #B4B4B8;
+            background-color: #F7F7F7;
             color: #333;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            line-height: 1.6;
         }
 
+        /* Header */
         header {
             display: flex;
             align-items: center;
@@ -27,7 +29,7 @@
             width: 100%;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             z-index: 1000;
-            padding: 20px;
+            padding: 15px 20px;
             box-sizing: border-box;
         }
 
@@ -37,7 +39,7 @@
         }
 
         header img {
-            width: 95px;
+            width: 85px;
             height: auto;
             margin-right: 10px;
         }
@@ -45,7 +47,8 @@
         header p {
             margin: 0;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.1em;
+            color: #45474B;
         }
 
         header nav {
@@ -56,21 +59,24 @@
 
         header a {
             color: #333;
-            padding: 14px 20px;
+            padding: 10px 15px;
             text-decoration: none;
             text-align: center;
             transition: background-color 0.3s, color 0.3s;
+            font-size: 1em;
+            border-radius: 5px;
         }
 
         header a:hover, header a:focus {
-            background-color: #ddd;
-            color: black;
+            background-color: #f0f0f0;
+            color: #000;
         }
 
         html {
             scroll-behavior: smooth;
         }
 
+        /* Main Content */
         .main-content {
             flex: 1;
             padding: 0 20px;
@@ -78,8 +84,9 @@
             text-align: center;
         }
 
+        /* Hero Section */
         .hero-section {
-            background: url('ymt_hero.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('ymt_hero.jpg') no-repeat center center/cover;
             height: 100vh;
             color: white;
             display: flex;
@@ -89,57 +96,58 @@
         }
 
         .hero-section h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin: 0;
         }
 
         .hero-section p {
-            font-size: 1.5em;
+            font-size: 1.2em;
             margin: 20px 0;
         }
 
         .cta-button {
             background-color: #45474B;
             color: #fff;
-            padding: 15px 30px;
-            border: none black;
+            padding: 12px 25px;
+            border: none;
             border-radius: 5px;
             text-decoration: none;
             font-size: 1.2em;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
 
         .cta-button:hover {
             background-color: #303134;
         }
 
+        /* Section Styles */
         .adv {
-            background-size: cover;
-            background-position: center;
-            text-align: center;
             position: relative;
             overflow: hidden;
-        }
-
-        .adv img {
-            width: 60%;
-            height: auto;
-            display: block;
+            padding: 50px 0;
+            background: #f0f0f0;
         }
 
         .aboutus, .service, .career {
             padding: 50px 20px;
             text-align: center;
+            background-color: #fff;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .aboutus h2, .service h2, .career h2 {
             font-size: 2em;
             margin-bottom: 20px;
+            color: #45474B;
         }
-
 
         .aboutus p {
             text-align: center;
+            font-size: 1.1em;
+            color: #666;
         }
 
         .card-container {
@@ -153,30 +161,42 @@
             background-color: #fff;
             width: 300px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             overflow: hidden;
             text-align: center;
             padding: 20px;
             box-sizing: border-box;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
         .card h3 {
             margin: 0;
             margin-bottom: 10px;
+            font-size: 1.4em;
+            color: #333;
         }
 
         .card p {
             margin: 0;
+            color: #666;
+            font-size: 1em;
         }
 
-        .card a{
+        .card a {
             display: inline-block;
             text-align: center;
             color: #45474B;
             font-size: 16px;
             transition: all 0.5s;
             cursor: pointer;
-            margin: 5px;
+            margin-top: 10px;
+            text-decoration: none;
+            font-weight: bold;
         }
 
         .card a span {
@@ -203,32 +223,37 @@
             opacity: 1;
             right: 0;
         }
-        
 
+        /* Footer */
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 10px;
             width: 100%;
             margin-top: auto;
         }
 
+        footer h2, footer h3 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 1em;
+            color: #ccc;
+        }
+
         @media (max-width: 1024px) {
             header {
-                padding: 0 15px;
-                height: auto;
+                padding: 10px 15px;
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 10px;
-            }
-
-            header .logo {
-                margin-bottom: 10px;
             }
 
             header img {
-                width: 80px;
+                width: 70px;
             }
 
             header p {
@@ -238,56 +263,20 @@
             header nav {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 5px;
-                padding: 20px;
-            }
-
-            header a {
-                padding: 20px;
-                margin-top: 10px;
-                font-size: 1.2em;
-            }
-        }
-
-        @media (max-width: 768px) {
-            header {
-                padding: 0 10px;
-                height: auto;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            header .logo {
-                margin-bottom: 10px;
-            }
-
-            header img {
-                width: 70px;
-            }
-
-            header p {
-                font-size: 0.9em;
-            }
-
-            header nav {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 5px;
-                padding: 8px;
+                gap: 10px;
             }
 
             header a {
                 padding: 10px;
-                margin-top: 5px;
-                font-size: 1.1m;
+                font-size: 1.1em;
             }
 
             .hero-section h1 {
-                font-size: 2.5em;
+                font-size: 2.2em;
             }
 
             .hero-section p {
-                font-size: 1.2em;
+                font-size: 1.1em;
             }
 
             .cta-button {
@@ -300,79 +289,107 @@
             }
         }
 
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            margin-top: -22px;
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: rgba(0, 0, 0, 0.5);
+        @media (max-width: 768px) {
+            header img {
+                width: 60px;
+            }
+
+            header p {
+                font-size: 0.9em;
+            }
+
+            header a {
+                padding: 8px;
+                font-size: 1em;
+            }
+
+            .hero-section h1 {
+                font-size: 2em;
+            }
+
+            .hero-section p {
+                font-size: 1em;
+            }
+
+            .cta-button {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
         }
 
-        .prev {
-            left: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        .next {
-            right: 0;
-            border-radius: 0px 3 3 0px;
-        }
-
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .mySlides {
-            display: none;
-        }
-
-
-
-
-        /* Add this new style for the image container */
-.image-container {
-    text-align: center; /* Center the image horizontally */
-    max-width: 100%; /* Adjust the max-width as needed */
-    margin: 0 auto; /* Center the container */
-}
-
-.image-container img {
-    width: 100%; /* Make the image fit within the container */
-    height: auto;
-}
-
-/* Adjust the slideshow container to handle the new image size */
+        /* Slideshow */
 .slideshow-container {
     position: relative;
-    max-width: 60%;
-    margin: 0 auto; /* Center the container */
+    width: 80%;
+    margin: 0 auto;
     overflow: hidden;
 }
 
-/* Adjust prev and next buttons */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 33.33%; /* Show 3 slides at a time */
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+}
+
 .prev, .next {
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust to align with smaller images */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 30px; /* Adjust the width */
+    height: 30px; /* Adjust the height */
+    margin-top: -15px; /* Center vertically */
+    padding: 8px; /* Adjust the padding */
+    color: white;
+    font-weight: bold;
+    font-size: 18px; /* Adjust font size */
+    transition: 0.6s ease;
+    border-radius: 50%; /* Make buttons circular */
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center; /* Center text */
 }
 
-@media (max-width: 1024px) {
-    .image-container {
-        max-width: 80%; /* Adjust max-width for smaller screens */
-    }
+.prev {
+    left: 10px; /* Adjust position */
 }
 
-@media (max-width: 768px) {
-    .image-container {
-        max-width: 100%; /* Adjust max-width for smaller screens */
-    }
+.next {
+    right: 10px; /* Adjust position */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
 }
 
     </style>
@@ -380,54 +397,63 @@
 <body>
     <header>
         <div class="logo">
-            <img src="ymt.tran.png" alt="Logo"/>
-            <p>YMT DEVELOPMENT RESOURCES</p>
+            <img src="ymt.tran.png" alt="YMT Logo">
+            <p>YMT Development Resources</p>
         </div>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#aboutus">About</a>
-            <a href="#service">Services</a>
+            <a href="#adv">Home</a>
+            <a href="#aboutus">About Us</a>
+            <a href="#service">Our Services</a>
             <a href="#career">Careers</a>
-            <a href="#footer">Contact</a>
+            <a href="#contact">Contact Us</a>
         </nav>
     </header>
 
     <div class="main-content">
-        <section id="home" class="hero-section">
+        <section class="hero-section">
             <h1>Welcome to YMT Development Resources</h1>
-            <p>Financial Planning And Risk Management</p>
-            <a href="#adv" class="cta-button">Learn More</a>
+            <p>Your trusted partner in growth and development</p>
+            <a href="#aboutus" class="cta-button">Learn More</a>
         </section>
 
         <section id="adv" class="adv">
             <div class="slideshow-container">
-        
-                <div class="mySlides">
-                    <div class="image-container">
-                        <img src="ymt_family.jpg" alt="Slide 1">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="../YMT/adv/5S.png" alt="Slide 1">
+                    </div>
+                    <div class="slide">
+                        <img src="../YMT/adv/FP.png" alt="Slide 2">
+                    </div>
+                    <div class="slide">
+                        <img src="../YMT/adv/JW.png" alt="Slide 3">
+                    </div>
+                    <div class="slide">
+                        <img src="../YMT/adv/new-slide-1.png" alt="Slide 4">
+                    </div>
+                    <div class="slide">
+                        <img src="../YMT/adv/new-slide-2.png" alt="Slide 5">
+                    </div>
+                    <div class="slide">
+                        <img src="../YMT/adv/new-slide-3.png" alt="Slide 6">
                     </div>
                 </div>
-                <div class="mySlides">
-                    <div class="image-container">
-                        <img src="#" alt="Slide 2">
-                    </div>
+                <div class="prev">&#10094;</div>
+                <div class="next">&#10095;</div>
+                <div class="dot-container">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
                 </div>
-                <div class="mySlides">
-                    <div class="image-container">
-                        <img src="slide3.jpg" alt="Slide 3">
-                    </div>
-                </div>
-        
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
         </section>
-        
+
         <section id="aboutus" class="aboutus">
-            <h2>About YMT Development Resources</h2>
-            <p>"Our company takes「professionalism, quality, service and efficiency」as its business philosophy, 
-            not only demanding 「precision」,「good」and 「fast」,</p>
-            <p>but also adhering to the spirit of 「honesty first and service first to do a good job in various services.」"</p>
+            <h2>About Us</h2>
+            <p>"Our company takes「professionalism, quality, service and efficiency」as its business philosophy, not only demanding「precision」,「good」and「fast」</p>
+            <p>but also adhering to the spirit of「honesty first and service first」to do a good job in various services."</p>
         </section>
 
         <section id="service" class="service">
@@ -435,22 +461,18 @@
             <div class="card-container">
                 <div class="card">
                     <h3>Financial Planning</h3>
-                    <p>Details about services for Financial Planning.</p>
-                    <a href="../YMT/service/child.html" class="button" style="vertical-align:middle"><span>Learn More </span></a>
+                    <p>Expert advice and strategies to help your business grow.</p>
+                    <a href="#"><span>Read More</span></a>
                 </div>
                 <div class="card">
-                    <h3>Service 2</h3>
-                    <p>Details about services.</p>
-                    <a href="../YMT/service/adult.html" class="button" style="vertical-align:middle"><span>Learn More </span></a>
+                    <h3>Risk Management</h3>
+                    <p>Custom development solutions that meet your needs.</p>
+                    <a href="#"><span>Read More</span></a>
                 </div>
                 <div class="card">
-                    <h3>Service 3</h3>
-                    <p>Details about services .</p>
-                    <a href="../YMT/service/old.html" class="button" style="vertical-align:middle"><span>Learn More </span></a>
-                </div>
-                <div class="card">
-                    <h3>Service 4</h3>
-                    <p>Details about additional services.</p>
+                    <h3>Others</h3>
+                    <p>Round-the-clock support to ensure smooth operations.</p>
+                    <a href="#"><span>Read More</span></a>
                 </div>
             </div>
         </section>
@@ -460,68 +482,76 @@
             <div class="card-container">
                 <div class="card">
                     <h3>Part Time</h3>
-                    <p>Details about part-time opportunities.</p>
-                    <a href="../YMT/career/parttime.html" class="button" style="vertical-align:middle"><span>Learn More </span></a>
+                    <p>Brief job description.</p>
+                    <a href="../YMT/career/parttime.html"><span>Read More</span></a>
                 </div>
                 <div class="card">
                     <h3>Full Time</h3>
-                    <p>Details about full-time positions.</p>
-                    <a href="../YMT/career/fulltime.html" class="button" style="vertical-align:middle"><span>Learn More </span></a>
+                    <p>Brief job description.</p>
+                    <a href="../YMT/career/fulltime.html"><span>Read More</span></a>
                 </div>
                 <div class="card">
                     <h3>Internship</h3>
-                    <p>Details about internship programs.</p>
-                    <a href="../YMT/career/intern.html" class="button" style="vertical-align:middle"><span>Learn More </span></a>
+                    <p>Brief job description.</p>
+                    <a href="../YMT/career/intern.html"><span>Read More</span></a>
                 </div>
             </div>
         </section>
     </div>
-    
-    <footer id="footer">
-        <div>
-            <h2>Contact Us</h2>
-            <p>Get in touch with us for more information.</p>
-        </div>
-        <p>&copy; 2024 YMT Development Resources. All rights reserved.</p>
+
+    <footer id="contact">
+        <h2>YMT Development Resources</h2>
+        <p>&copy; 2024 All Rights Reserved</p>
     </footer>
 
     <script>
-        var slideIndex = 0;
-        var timer;
+       let slideIndex = 0;
+const slides = document.querySelector('.slides');
+const slideWidth = document.querySelector('.slide').offsetWidth;
+const totalSlides = document.querySelectorAll('.slide').length;
 
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            if (n >= slides.length) {slideIndex = 0}
-            if (n < 0) {slideIndex = slides.length - 1}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex].style.display = "block";
-            clearTimeout(timer);
-            timer = setTimeout(autoSlides, 6000);
+function showSlides() {
+    slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        dot.className = dot.className.replace(" active", "");
+        if (index === slideIndex) {
+            dot.className += " active";
         }
+    });
+}
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
+function moveSlides(n) {
+    slideIndex += n;
+    if (slideIndex >= totalSlides) {
+        slideIndex = 0;
+    } else if (slideIndex < 0) {
+        slideIndex = totalSlides - 1;
+    }
+    showSlides();
+    resetAutoSlide(); // Reset the automatic slide timer when user manually changes slides
+}
 
-        function autoSlides() {
-            slideIndex++;
-            showSlides(slideIndex);
-        }
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval); // Clear existing timer
+    autoSlideInterval = setInterval(() => moveSlides(1), 5000); // Restart automatic slide timer
+}
 
-        showSlides(slideIndex);
-        autoSlides();
+document.querySelector('.prev').addEventListener('click', () => moveSlides(-1));
+document.querySelector('.next').addEventListener('click', () => moveSlides(1));
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+document.querySelectorAll('.dot').forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        slideIndex = index;
+        showSlides();
+        resetAutoSlide(); // Reset the automatic slide timer when user manually changes slides
+    });
+});
+
+showSlides(); // Initial call
+
+let autoSlideInterval = setInterval(() => moveSlides(1), 5000); // Start automatic slide
+
     </script>
 </body>
 </html>
