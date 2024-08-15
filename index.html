@@ -38,6 +38,10 @@
             align-items: center;
         }
 
+        .logo p{
+            font-size: 20px;
+        }
+
         header img {
             width: 85px;
             height: auto;
@@ -47,7 +51,7 @@
         header p {
             margin: 0;
             font-weight: bold;
-            font-size: 1.1em;
+            font-size: 0.9em;
             color: #45474B;
         }
 
@@ -90,6 +94,7 @@
             background-image: url(ymt_family.jpg);
             background-repeat: no-repeat;
             background-position:center;
+            background-size: cover; /* Ensures the background covers the entire section */
             margin-top: 50px;
             margin-bottom: 50px;
             height: 100vh;
@@ -116,7 +121,7 @@
             position: relative;
             overflow: hidden;
             padding: 50px 0;
-            background: #F8EDE3;
+            background: #FEF3E2;
         }
 
         .aboutus, .service, .career {
@@ -155,11 +160,12 @@
 
         .card {
             background-color: #fff;
-            width: 500px;
+            width: 350px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             overflow: hidden;
             text-align: center;
+            margin: 20px;
             padding: 20px;
             box-sizing: border-box;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -242,6 +248,8 @@
         }
 
         @media (max-width: 1024px) {
+
+
             header {
                 padding: 10px 15px;
                 flex-direction: column;
@@ -253,7 +261,7 @@
             }
 
             header p {
-                font-size: 1em;
+                font-size: 0.8em;
             }
 
             header nav {
@@ -267,22 +275,22 @@
                 font-size: 1.1em;
             }
 
+            .hero-section {
+                background-size: contain; /* Ensures the background fits within the container */
+                background-position: top; /* Aligns the background to the top */
+                height: 50vh; /* Adjust the height to be responsive on smaller screens */
+            }
+
             .hero-section h1 {
-                font-size: 2.2em;
+                font-size: 1.5em;
+                margin: 40px 0;
             }
 
             .hero-section p {
-                font-size: 1.1em;
+                font-size: 0.6em;
+                margin: -20px 0;
             }
 
-            .cta-button {
-                padding: 10px 20px;
-                font-size: 1em;
-            }
-
-            .card {
-                width: 100%;
-            }
         }
 
         @media (max-width: 768px) {
@@ -291,7 +299,7 @@
             }
 
             header p {
-                font-size: 0.9em;
+                font-size: 0.7em;
             }
 
             header a {
@@ -299,18 +307,20 @@
                 font-size: 1em;
             }
 
+            .hero-section {
+                height: 40vh; /* Further adjust height for very small screens */
+            }
+
             .hero-section h1 {
-                font-size: 2em;
+                font-size: 1.3em;
+                margin: 30px 0;
             }
 
             .hero-section p {
-                font-size: 1em;
+                font-size: 0.5em;
+                margin: -30px 0;
             }
 
-            .cta-button {
-                padding: 8px 15px;
-                font-size: 0.9em;
-            }
         }
 
         /* Slideshow */
@@ -324,14 +334,14 @@
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: calc(100% * totalSlides / 3); /* Adjust the width based on the number of slides */
 }
 
 .slide {
-    min-width: 33.33%; /* Show 3 slides at a time */
+    flex: 0 0 33.33%; /* Set each slide to take up 1/3rd of the container */
     box-sizing: border-box;
     padding: 0 10px;
 }
-
 .slide img {
     width: 100%;
     border-radius: 8px;
@@ -406,15 +416,15 @@
 .modal-content {
     margin: auto;
     display: block;
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90%;
+    max-height: 90%;
     cursor: zoom-in;
-    transition: transform 0.25s ease;
 }
 
 /* Zoom on hover */
 .modal-content:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
+    transition: transform 0.25s ease;
 }
 
 /* Caption of Modal Image (Image Text) - Optional */
@@ -447,6 +457,7 @@
 }
 
 
+
     </style>
 </head>
 <body>
@@ -457,30 +468,30 @@
         </div>
         <nav>
             <a href="#adv">Home</a>
-            <a href="#aboutus">About Us</a>
+            <a href="#aboutus">About</a>
             <a href="#service">Our Services</a>
             <a href="#career">Careers</a>
-            <a href="#contact">Contact Us</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <div class="main-content">
         <section class="hero-section">
             <h1>Welcome to YMT Development Resources</h1>
-            <p>Your trusted partner in growth and development</p>
+            <p>Financial Planning And Risk Management</p>
         </section>
 
         <section id="adv" class="adv">
             <div class="slideshow-container">
                 <div class="slides">
                     <div class="slide">
-                        <img src="../YMT/adv/5S.png" alt="5 Star Planning">
+                        <img src="../YMT/adv/5S.png" alt="5 Star Planning" onclick="openModal(this)">
                     </div>
                     <div class="slide">
-                        <img src="../YMT/adv/FP.png" alt="Financial Planning">
+                        <img src="../YMT/adv/FP.png" alt="Financial Planning" onclick="openModal(this)">
                     </div>
                     <div class="slide">
-                        <img src="../YMT/adv/JW.png" alt="Johari Window">
+                        <img src="../YMT/adv/JW.png" alt="Johari Window" onclick="openModal(this)">
                     </div>
                     <div class="slide">
                         <img src="../YMT/adv/new-slide-1.png" alt="Slide 1">
@@ -522,17 +533,21 @@
             <div class="card-container">
                 <div class="card">
                     <h3>Financial Planning</h3>
-                    <p>Take control of your financial future with smart planning! Discover how to save, invest, and grow your wealth. Start today and secure the life you deserve.</p>
+                    <p>Take control of your financial future with smart planning!</p>
+                    <p>Discover how to save, invest, and grow your wealth.</p>
+                    <p>Start today and secure the life you deserve.</p>
                     <a href="#"><span>Click to learn more!</span></a>
                 </div>
                 <div class="card">
                     <h3>Risk Management</h3>
-                    <p>Safeguard your financial future with smart risk management! Learn how to protect your assets, minimize losses, and make confident decisions.</p>
+                    <p>Safeguard your financial future with smart risk management!</p>
+                    <p>Learn how to protect your assets, minimize losses, and make confident decisions.</p>
                     <a href="#"><span>Click to learn more!</span></a>
                 </div>
                 <div class="card">
                     <h3>Others</h3>
-                    <p>Discover the tools and strategies to build your financial security. From planning to protection, take charge of your future today.</p>
+                    <p>Discover the tools and strategies to build your financial security.</p>
+                    <p>From planning to protection, take charge of your future today.</p>
                     <a href="#"><span>Click to learn more!</span></a>
                 </div>
             </div>
@@ -566,86 +581,95 @@
     </footer>
 
     <script>
-  let slideIndex = 0;
-const slides = document.querySelector('.slides');
-const slideWidth = document.querySelector('.slide').offsetWidth;
-const totalSlides = document.querySelectorAll('.slide').length;
+        let slideIndex = 0;
+        let slidesPerView = 3; // Default number of slides visible at once
 
-function showSlides() {
-    slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
-    const dots = document.querySelectorAll('.dot');
-    dots.forEach((dot, index) => {
-        dot.className = dot.className.replace(" active", "");
-        if (index === slideIndex) {
-            dot.className += " active";
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        function updateSlideWidth() {
+            const slideWidth = document.querySelector('.slide').offsetWidth;
+            slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
         }
-    });
-}
 
-function moveSlides(n) {
-    slideIndex += n;
-    if (slideIndex >= totalSlides) {
-        slideIndex = 0;
-    } else if (slideIndex < 0) {
-        slideIndex = totalSlides - 1;
-    }
-    showSlides();
-    resetAutoSlide(); // Reset the automatic slide timer when user manually changes slides
-}
+        function updateSlidesPerView() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth <= 768) {
+                slidesPerView = 1;
+            } else if (screenWidth <= 1024) {
+                slidesPerView = 2;
+            } else {
+                slidesPerView = 3;
+            }
+            updateSlideWidth();
+        }
 
-function resetAutoSlide() {
-    clearInterval(autoSlideInterval); // Clear existing timer
-    autoSlideInterval = setInterval(() => moveSlides(1), 5000); // Restart automatic slide timer
-}
+        function showSlides() {
+            updateSlideWidth();
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                dot.className = dot.className.replace(" active", "");
+                if (index === Math.floor(slideIndex / slidesPerView)) {
+                    dot.className += " active";
+                }
+            });
+        }
 
-document.querySelector('.prev').addEventListener('click', () => moveSlides(-1));
-document.querySelector('.next').addEventListener('click', () => moveSlides(1));
+        function moveSlides(n) {
+            slideIndex += n;
+            if (slideIndex >= totalSlides - (slidesPerView - 1)) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = totalSlides - slidesPerView;
+            }
+            showSlides();
+        }
 
-document.querySelectorAll('.dot').forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        slideIndex = index;
-        showSlides();
-        resetAutoSlide(); // Reset the automatic slide timer when user manually changes slides
-    });
-});
+        document.querySelector('.prev').addEventListener('click', () => moveSlides(-1));
+        document.querySelector('.next').addEventListener('click', () => moveSlides(1));
 
-showSlides(); // Initial call
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                slideIndex = index * slidesPerView;
+                showSlides();
+                resetAutoSlide(); // Reset the automatic slide timer when the user manually changes slides
+            });
+        });
 
-let autoSlideInterval = setInterval(() => moveSlides(1), 5000); // Start automatic slide
+        window.addEventListener('resize', () => {
+            updateSlidesPerView(); // Adjust the number of slides per view on window resize
+        });
 
-// Define the zoom percentage
-let zoomPercentage = 1; // This is 100%
+        updateSlidesPerView(); // Initial call to set slides per view based on screen size
+        showSlides(); // Initial call to show the slides
 
-// Modal functionality
-const modal = document.getElementById("imageModal");
-const modalImg = document.getElementById("imgInModal");
-const captionText = document.getElementById("caption");
+        let autoSlideInterval = setInterval(() => moveSlides(1), 3000); // Start automatic slide
 
-// Add click event listeners to each image
-document.querySelectorAll('.slide img').forEach((img) => {
-    img.addEventListener('click', function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
-        modalImg.style.transform = `scale(${zoomPercentage})`; // Apply the zoom
-    });
-});
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval); // Clear existing timer
+            autoSlideInterval = setInterval(() => moveSlides(1), 3000); // Restart automatic slide timer
+        }
 
-// Close the modal when the user clicks on <span> (x)
-document.querySelector('.close').addEventListener('click', function() {
-    modal.style.display = "none";
-    modalImg.style.transform = "scale(1)"; // Reset zoom when closing
-});
+        // Function to open modal
+        function openModal(img) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('imgInModal');
+            const captionText = document.getElementById('caption');
 
-// Allow further zoom on hover (if needed)
-modalImg.addEventListener('mouseenter', function() {
-    modalImg.style.transform = `scale(${zoomPercentage + 0.1})`; // Slightly increase zoom on hover
-});
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        }
 
-modalImg.addEventListener('mouseleave', function() {
-    modalImg.style.transform = `scale(${zoomPercentage})`; // Revert to the original zoom
-});
+        // Function to close modal
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = "none";
+        }
 
-        </script>
+        // Add event listener to close button
+        document.querySelector('.close').addEventListener('click', closeModal);
+    </script>
+        
 </body>
 </html>
