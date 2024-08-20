@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page - YMT Development Resources</title>
     <link rel="icon" type="image/png" sizes="64x64" href="ymt_icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto', Arial, sans-serif;
@@ -306,32 +307,27 @@ footer p {
     bottom: 10px;
 }
 
-.contact-info .social-media{
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
-
-.contact-info .social-media:hover {
-    opacity: 0.7;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    color: #494949;
-    background-color: #fff;
-    border: none;
+.contact-info .working-hours a{
+    color: #f0f0f0; 
     cursor: pointer;
-    border-radius: 5px;
+    text-decoration-line: underline;
+    
 }
 
-button:hover {
-    background-color: #ccc;
+.contact-info .working-hours .social-icons {
+    margin: 20px 0;
+}
+
+.contact-info .working-hours .social-icon {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.contact-info .working-hours .social-icon:hover {
+    color: #BEC6A0; /* Adjust the hover color as needed */
 }
 
 
@@ -419,6 +415,13 @@ button:hover {
             }
 
         }
+
+        @media (max-width: 600px) {
+    .social-icon {
+        font-size: 20px;
+        margin: 0 5px;
+    }
+}
 
         /* Slideshow */
 .slideshow-container {
@@ -682,7 +685,13 @@ button:hover {
                 <h3>Contact Number</h3>
                 <p>07-288 0921</p>
                 <h3>Email Address</h3>
-                <a onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=contact@ymtdevelopmentjj@gmail.com');" style="color: #f0f0f0; cursor: pointer;">ymtdevelopmentjj@gmail.com</a>
+                <a onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=contact@ymtdevelopmentjj@gmail.com');">ymtdevelopmentjj@gmail.com</a>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/ymtdr?mibextid=LQQJ4d" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/ymt_development_resources?igsh=aHlrcTJ3aGFvMjUx" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://g.co/kgs/zcfDfrV" target="_blank" class="social-icon"><i class="fab fa-google"></i></a>
+                    <a href="https://www.linkedin.com/company/ymt-development-resources-create-your-career-from-here/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
         </div>
 
