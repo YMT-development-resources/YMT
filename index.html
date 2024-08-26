@@ -11,8 +11,7 @@
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url(background.jpg);
-            background-size: 100%;
+            background-color: #FEF3E2;
             color: #333;
             display: flex;
             flex-direction: column;
@@ -124,9 +123,9 @@
             position: relative;
             overflow: hidden;
             padding: 50px 0;
+            background: #FEF3E2;
         }
 
-        
         .aboutus, .service, .career {
             position: relative;
             padding: 40px 30px;
@@ -361,7 +360,7 @@ footer p {
             }
 
             .hero-section {
-                background-size: 70%; /* Ensures the background fits within the container */
+                background-size: contain; /* Ensures the background fits within the container */
                 background-position: top; /* Aligns the background to the top */
                 height: 45vh; /* Adjust the height to be responsive on smaller screens */
             }
@@ -602,6 +601,8 @@ footer p {
                 <div class="prev">&#10094;</div>
                 <div class="next">&#10095;</div>
                 <div class="dot-container">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
                     <span class="dot"></span> 
                     <span class="dot"></span> 
                     <span class="dot"></span> 
