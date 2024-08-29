@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part Time</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FEF3E2;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            background-color: #BEC6A0;
+            background-repeat: no-repeat;
+            background-position: center; 
+            max-width: 90%;
+            margin-left: 5%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            border-radius: 50px;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5em;
+            margin: 50px 0;
+            text-shadow: 2px 2px 4px #000000;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            margin: -40px;
+            text-shadow: 2px 2px 4px #000000;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+       
+        html {
+            scroll-behavior: smooth;
+        }
+    
+        /* Fotter */
+        footer {
+            background-color: #494949;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        footer h2, footer h3 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 1em;
+            color: #ccc;
+        }
+        /* Animension */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; 
+        }
+
+        .container {
+            position: relative;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .slide-in {
+            position: relative;
+            opacity: 0;
+            transition: all 1s ease-out;
+            margin: 0px 50px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .slide-in.active {
+            left: 0; 
+            opacity: 1;
+        }
+
+        .subtitle {
+            margin: 10px 50px;
+            font-size: 1.2em;
+            color: #555;
+        }
+        /* Link */
+        .subtitle a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="hero-section" id="home">
+        <h1>Part Time</h1>
+        <p>Flexibility and Freedom in terms of time and financial commitment</p>
+    </section>
+
+    <div class="container">
+        <h2 class="slide-in">
+        <p>
+            In the life insurance industry, part-time roles offer a unique blend of flexibility and opportunity.Professionals in these positions often work fewer hours than their full-time counterparts, allowing them to balance other commitments, such as family, education, or additional employment.
+        </h2>
+        </p>
+        <i class="slide-in subtitle"></i>
+        
+        <details>
+            <summary>Read More</summary>
+            <p>
+            <i>
+                Professional Knowledge: Insurance Product Knowledge，Financial Planning Skills，Client Relationship Management，Marketing Skills，Risk Assessment and Management，Legal and Compliance Knowledge，Legal and Compliance Knowledge
+                <a href="#page-bottom">Click here to learn more!</a>
+            </i>
+            </p>
+        </details>
+        
+        <details>
+            <summary>Financial Advance</summary>
+            <p><i>
+                Financial Advisong,Digital Marketing,Marketing Executive,Customer Service
+                <li>Requirement: SPM and above, High level of integrity, takes accountability of work and good attitude. Work well independently as well an in a team.</li>
+                <li>Benefits: Provides goood hostel environment , Provides good working environment</li>
+                <a href="#page-bottom">Click here to learn more!</a>
+            </i></p>
+            
+        </details>
+    </div>
+
+    <div style="height: 150vh;"></div>
+
+    <div id="page-bottom" style="text-align: center; padding: 20px;"></div>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            const slideInElements = document.querySelectorAll('.slide-in');
+            const screenPosition = window.innerHeight / 1.2; 
+
+            slideInElements.forEach((element) => {
+                const elementPosition = element.getBoundingClientRect().top;
+
+                if (elementPosition < screenPosition) {
+                    element.classList.add('active');
+                }
+            });
+        });
+    </script>
+    <footer id="contact">
+        <h2>YMT Development Resources</h2>
+        <p>TN:07-289 2764</p>
+        <p>Email:ymtdevelopmentjj@gmail.com </p>
+        <p>FB:https://www.facebook.com/ymt.resource</p>
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

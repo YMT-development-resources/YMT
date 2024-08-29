@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: 'Roboto', Arial, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #FEF3E2;
+            background-color: #fff;
             color: #333;
             display: flex;
             flex-direction: column;
@@ -19,14 +19,70 @@
             line-height: 1.6;
         }
 
-        /* Header */
-        header {
+        /* Top Header Styling */
+.top-header {
+    background-color: #1B3C73; 
+    padding:0; 
+}
+
+.top-header p{
+    color: white;
+    position: inherit;
+}
+
+.top-header ul {
+    list-style: none; /* Remove bullets from list */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; /* Vertically center the items */
+    gap: 20px; /* Space between the items */
+}
+
+.top-header ul li {
+    display: flex; /* Align icons with text */
+    align-items: center; /* Vertically center the text and icons */
+}
+
+.top-header ul li a {
+    color: white; /* White color for text and icons */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 14px; /* Font size for text */
+    display: flex; /* Align icon with text */
+    align-items: center; /* Vertically center icon and text */
+}
+
+.top-header ul li a .fab {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 18px; /* Font size for icons */
+}
+
+.top-header ul li a:hover {
+    color: gray; /* Change color on hover */
+}
+
+.top-header ul li a i {
+    font-style: normal; /* Display text normally */
+}
+
+/* Icon-specific styling */
+.social-icon .fab {
+    font-family: 'Font Awesome 5 Brands'; /* Ensure font is applied */
+}
+
+.social-icon i {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+        /* Main-eader */
+        .main-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: #BEC6A0;
-            position: fixed;
-            top: 0;
+            background-color: #fff;
             width: 100%;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             z-index: 1000;
@@ -35,7 +91,7 @@
         }
         
 
-        header .logo {
+        .main-header .logo {
             display: flex;
             align-items: center;
         }
@@ -44,26 +100,26 @@
             font-size: 25px;
         }
 
-        header img {
+        .main-header img {
             width: 85px;
             height: auto;
             margin-right: 10px;
         }
 
-        header p {
+        .main-header p {
             margin: 0;
             font-weight: bold;
-            font-size: 0.9em;
+            font-size: 1.8em;
             color: #45474B;
         }
 
-        header nav {
+        .main-header nav {
             display: inline-block;
             gap: 20px;
             align-items: center;
         }
 
-        header a {
+        .main-header a {
             color: #333;
             padding: 10px 15px;
             text-decoration: none;
@@ -73,8 +129,8 @@
             border-radius: 5px;
         }
 
-        header a:hover, header a:focus {
-            background-color: #f0f0f0;
+        .main-header a:hover, .main-header a:focus {
+            background-color: gray;
             color: #000;
         }
 
@@ -84,28 +140,22 @@
 
         /* Main Content */
         .main-content {
-            flex: 1;
-            padding: 0 20px;
-            margin-top: 70px;
             text-align: center;
             color: #111;
+            margin-top: 20px;
         }
 
         /* Hero Section */
         .hero-section {
             position: relative;
-            background-image: url(ymt_family.jpg);
+            background-image: url(ymt_family.png);
             background-repeat: no-repeat;
             background-size: cover;
             width: 100%;
             height: 100vh;
-            margin-top: 80px;
-            margin-bottom: 60px;
             display: flex;
             flex-direction: column;
             color: #fff;
-            border-radius: 50px;
-
     }
 
         .hero-section h1 {
@@ -124,22 +174,15 @@
         .adv {
             position: relative;
             overflow: hidden;
-            background: #FEF3E2;
-        }
-
-        .aboutus, .service, .career {
-            position: relative;
-            padding: 40px 30px;
-            text-align: center;
-            background-color: #FAF6E9;
-            margin-left: 2px;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: #1B3C73;
+            height: 800px;
         }
 
 
+        .aboutus{
+            padding: 100px 90px;
+            text-align: left;
+        }
 
         .aboutus h2, .service h2, .career h2 {
             font-size: 2em;
@@ -148,7 +191,6 @@
         }
 
         .aboutus p {
-            text-align: center;
             font-size: 1.2em;
             color: #666;
         }
@@ -190,55 +232,64 @@
             right: 0;
         }
 
+        .service h2{
+            margin: 0;
+            padding: 0;
+        }
+
         .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 60px;
-            justify-content: center;
-        }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0px;
+    margin: 20px 50px;
+}
 
-        .card {
-            background-color: #fff;
-            width: 350px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            overflow: hidden;
-            text-align: center;
-            margin: 5px;
-            padding: 20px;
-            box-sizing: border-box;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+.card {
+    flex: 1;
+    background-color: #1B3C73; /* Adjust background color to your desired shade */
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 300px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    transition: background-color 0.3s ease;
+    border-left: 10px solid #40679E; /* Differentiate sections with a side border */
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
+.card:nth-child(2) {
+    background-color: #40679E; /* Adjust background color */
+    border-left: 10px solid #445e82; /* Adjust border color */
+}
 
-        .card h3 {
-            margin: 0;
-            margin-bottom: 10px;
-            font-size: 1.4em;
-            color: #333;
-        }
+.card:nth-child(3) {
+    background-color: #666; /* Adjust background color */
+    border-left: 10px solid #43556d; /* Adjust border color */
+}
 
-        .card p {
-            margin: 0;
-            color: #666;
-            font-size: 1em;
-        }
+.card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
 
-        .card a {
-            display: inline-block;
-            text-align: center;
-            color: #45474B;
-            font-size: 16px;
-            transition: all 0.5s;
-            cursor: pointer;
-            margin-top: 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.card p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.card a {
+    display: inline-block;
+    color: #FFF;
+    margin-top: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 
         .card a span {
             cursor: pointer;
@@ -264,6 +315,100 @@
             opacity: 1;
             right: 0;
         }
+
+        /*Careers*/
+        .career {
+    padding: 20px;
+    background-color: #40679E;
+    text-align: center;
+}
+
+.career h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.career-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.career-card {
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 1000px;
+    height: auto;
+    margin: 30px auto;
+}
+
+.career-card-content {
+    flex: 1;
+    padding: 20px;
+    margin: 10px 30px;
+    text-align: left;
+}
+
+.career-card-fulltime{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 1000px;
+    height: auto;
+    margin: 30px auto;
+}
+
+.career-card-content h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.career-card-content p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.career-card-content a {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.career-card-content a:hover {
+    background-color: #0056b3;
+}
+
+.career-card-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    min-height: 250px;
+}
+
+@media screen and (max-width: 768px) {
+    .career-card {
+        flex-direction: column;
+    }
+
+    .career-card-image {
+        height: 200px;
+    }
+}
+
 
         /* Footer */
 footer {
@@ -328,7 +473,7 @@ footer p {
 }
 
 .contact-info .working-hours .social-icon:hover {
-    color: #BEC6A0; /* Adjust the hover color as needed */
+    color: #40679E; /* Adjust the hover color as needed */
 }
 
 
@@ -441,11 +586,11 @@ footer p {
 .slide {
     flex: 0 0 33.33%; /* Set each slide to take up 1/3rd of the container */
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 150px 0;
     cursor: zoom-in;
 }
 .slide img {
-    width: 100%;
+    width: 80%;
     border-radius: 8px;
     height: auto;
 }
@@ -558,17 +703,31 @@ footer p {
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="ymt.tran.png" alt="YMT Logo" style="width: 100px; height: auto;">
-            <p>YMT Development Resources</p>
+        <div class="top-header">
+            <ul>
+                <li><p>ymtdevelopmentjj@gmail.com</p></li>
+                <li><p>07-288 0921</p></li>
+                <li><a href="https://www.facebook.com/ymtdr?mibextid=LQQJ4d" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/ymt_development_resources?igsh=aHlrcTJ3aGFvMjUx" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://g.co/kgs/zcfDfrV" target="_blank" class="social-icon"><i class="fab fa-google"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/ymt-development-resources-create-your-career-from-here/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.tiktok.com/@ymtdr?_t=8pD05zIPdQm&_r=1" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a></li>
+            </ul>
         </div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#aboutus">About</a>
-            <a href="#service">Services</a>
-            <a href="#career">Careers</a>
-            <a href="#contact">Contact</a>
-        </nav>
+
+        <div class="main-header">
+            <div class="logo">
+                <img src="ymt.tran.png" alt="YMT Logo" style="width: 110px; height: auto;">
+                <p>YMT Development Resources</p>
+            </div>
+            <nav>
+                <a href="#"><b>Home</b></a>
+                <a href="#aboutus"><b>About</b></a>
+                <a href="#service"><b>Services</b></a>
+                <a href="#career"><b>Careers</b></a>
+                <a href="#contact"><b>Contact</b></a>
+            </nav>
+        </div>
     </header>
 
     <div class="main-content">
@@ -605,8 +764,6 @@ footer p {
                     <span class="dot"></span> 
                     <span class="dot"></span> 
                     <span class="dot"></span> 
-                    <span class="dot"></span> 
-                    <span class="dot"></span> 
                 </div>
             </div>
         </section>
@@ -620,52 +777,62 @@ footer p {
 
         <section id="aboutus" class="aboutus">
             <h2>About Us</h2>
-            <p>"Our company takes「professionalism, quality, service and efficiency」as its business philosophy, not only demanding「precision」,「good」and「fast」</p>
-            <p>but also adhering to the spirit of「honesty first and service first」to do a good job in various services."</p>
+            <p>"Our company takes「professionalism, quality, service and efficiency」as its business philosophy, not only demanding「precision」,「good」and「fast, but also adhering to the spirit of「honesty first and service first」to do a good job in various services."</p>
             <a href="../YMT/aboutus_page/aboutus.html"><span>Read More</span></a>
         </section>
 
         <section id="service" class="service">
             <h2>Our Services</h2>
+            <hr style="width: 20%; margin: 0 auto; border:2px #1B3C73 solid;">
             <div class="card-container">
                 <div class="card">
                     <h3>Insurance</h3>
                     <p>Protect what matters most. Secure your future today with comprehensive insurance solutions.</p>
-                    <a href="../YMT/service/service.html"><span>Click to learn more!</span></a>
+                    <a href="../YMT/service/service.html"><span>Read More</span></a>
                 </div>
                 <div class="card">
                     <h3>Financial Planning</h3>
                     <p>Take charge of your financial future. Learn to save, invest, and grow your wealth today.</p>
-                    <a href="../YMT/service/service.html"><span>Click to learn more!</span></a>
+                    <a href="../YMT/service/service.html"><span>Read More</span></a>
                 </div>
                 <div class="card">
                     <h3>Others</h3>
                     <p>Build financial security with the right tools and strategies. Take charge today.</p>
-                    <a href="../YMT/service/service.html"><span>Click to learn more!</span></a>
+                    <a href="../YMT/service/service.html"><span>Read More</span></a>
                 </div>
             </div>
         </section>
 
         <section id="career" class="career">
             <h2>Careers</h2>
-            <div class="card-container">
-                <div class="card">
-                    <h3>Part Time</h3>
-                    <p>Joining us is not only a career, but also a dream for yourself, urging yourself to fly higher and looking forward to it. Life is full of dreams and wonderful things!</p>
-                    <a href="../YMT/career/parttime.html"><span>Read More</span></a>
+            <div class="career-container">
+                <div class="career-card">
+                    <div class="career-card-content">
+                        <h3>Part Time</h3>
+                        <p>Joining us is not only a career, but also a dream for yourself, urging yourself to fly higher and looking forward to it. Life is full of dreams and wonderful things!</p>
+                        <a href="../YMT/career/parttime.html"><span>Apply Now!</span></a>
+                    </div>
+                    <div class="career-card-image" style="background-image: url('career/ymt_part.jpg')"></div>
                 </div>
-                <div class="card">
-                    <h3>Full Time</h3>
-                    <p>Join us to gain a fresh perspective of the financial services industry and get insight into business and operations.</p>
-                    <a href="../YMT/career/fulltime.html"><span>Read More</span></a>
+                <div class="career-card-fulltime">
+                    <div class="career-card-content">
+                        <h3>Full Time</h3>
+                        <p>Join us to gain a fresh perspective of the financial services industry and get insight into business and operations.</p>
+                        <a href="../YMT/career/fulltime.html"><span>Apply Now!</span></a>
+                    </div>
+                    <div class="career-card-image" style="background-image: url('career/ymt_full.jpg');"></div>
                 </div>
-                <div class="card">
-                    <h3>Internship</h3>
-                    <p>Join our team and gain valuable experience! Register now for our internship program and take the first step towards a successful career</p>
-                    <a href="../YMT/career/intern.html"><span>Read More</span></a>
+                <div class="career-card">
+                    <div class="career-card-content">
+                        <h3>Internship</h3>
+                        <p>Join our team and gain valuable experience! Register now for our internship program and take the first step towards a successful career</p>
+                        <a href="../YMT/career/intern.html"><span>Apply Now!</span></a>
+                    </div>
+                    <div class="career-card-image" style="background-image: url('career/ymt_intern.png');"></div>
                 </div>
             </div>
         </section>
+        
     </div>
 
     <footer id="contact">
