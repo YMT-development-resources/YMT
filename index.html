@@ -404,6 +404,10 @@
         flex-direction: column;
     }
 
+    .career-card-fulltime{
+        flex-direction: column;
+    }
+
     .career-card-image {
         height: 200px;
     }
@@ -473,34 +477,38 @@ footer p {
 }
 
 .contact-info .working-hours .social-icon:hover {
-    color: #40679E; /* Adjust the hover color as needed */
+    color: #40679E;
 }
 
 
         @media (max-width: 1024px) {
 
-
-            header {
-                padding: 10px 15px;
+            .top-header li p, .top-header li a{
                 flex-direction: column;
                 align-items: flex-start;
             }
 
-            header img {
-                width: 70px;
+            .main-header {
+                padding: 10px 15px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .main-header img {
+                width: 50px;
             }
 
-            header p {
-                font-size: 0.8em;
+            .main-header .logo p{
+                font-size: 1.5em;
             }
 
-            header nav {
+            .main-header nav {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 10px;
             }
 
-            header a {
+            .main-header a {
                 padding: 10px;
                 font-size: 1.1em;
             }
@@ -521,19 +529,43 @@ footer p {
                 margin: -20px 0;
             }
 
+            .adv {
+        height: 75vh; /* Adjust the height for tablets */
+        margin: -80px 0; /* Adjust margins to fit better */
+    }
 
-        }
+    .slideshow-container {
+        height: 100%; /* Ensure the slideshow container fills the section */
+    }
+
+    .slide img {
+        height: auto;
+        width: 100%; /* Ensure images fit within the container */
+        object-fit: cover; /* Crop the image to fit the container, if necessary */
+    }
+}
+
+
 
         @media (max-width: 768px) {
-            header img {
+
+            .top-header li p, .top-header li a{
+                padding: 0 5px;
+                margin: 5px -10px;
+                font-size: 12px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .main-header img {
                 width: 60px;
             }
 
-            header p {
+            .main-header p {
                 font-size: 0.7em;
             }
 
-            header a {
+            .main-header a {
                 padding: 8px;
                 font-size: 1em;
             }
@@ -560,14 +592,37 @@ footer p {
                 height: 300px;
             }
 
-        }
-
-        @media (max-width: 600px) {
-    .social-icon {
-        font-size: 20px;
-        margin: 0 5px;
+            .adv {
+        height: 60vh; /* Adjust the height further for smaller screens */
+        margin: 0;
     }
-}
+
+    .slideshow-container {
+        height: 100%;
+    }
+
+    .slide img {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .prev, .next {
+        font-size: 14px; /* Make the navigation buttons smaller */
+        padding: 5px;
+    }
+
+    .dot-container {
+        bottom: 15px; /* Adjust the dot position */
+    }
+
+    .dot {
+        height: 8px;
+        width: 8px;
+        margin: 0 3px;
+    }
+
+        }
 
         /* Slideshow */
 .slideshow-container {
@@ -710,7 +765,7 @@ footer p {
                 <li><p><i class="fa-solid fa-phone" style="color: #fff;"></i>  07-288 0921</p></li>
                 <li><a href="https://www.facebook.com/ymtdr?mibextid=LQQJ4d" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a></li>
                 <li><a href="https://www.instagram.com/ymt_development_resources?igsh=aHlrcTJ3aGFvMjUx" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://g.co/kgs/zcfDfrV" target="_blank" class="social-icon"><i class="fab fa-google"></i></a></li>
+                <li><a href="https://g.co/kgs/zcfDfrV" target="_blank" ><i class="fab fa-google"></i></a></li>
                 <li><a href="https://www.linkedin.com/company/ymt-development-resources-create-your-career-from-here/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a></li>
                 <li><a href="https://www.tiktok.com/@ymtdr?_t=8pD05zIPdQm&_r=1" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a></li>
             </ul>
