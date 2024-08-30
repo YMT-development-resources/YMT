@@ -96,17 +96,12 @@
             align-items: center;
         }
 
-        .logo p{
-            font-size: 25px;
-        }
-
         .main-header img {
-            width: 85px;
-            height: auto;
-            margin-right: 10px;
+            width: 100px; /* Default logo size */
+            transition: width 0.3s ease; /* Smooth transition */
         }
 
-        .main-header p {
+        .main-header p, .main-header a{
             margin: 0;
             font-weight: bold;
             font-size: 1.8em;
@@ -481,148 +476,142 @@ footer p {
 }
 
 
-        @media (max-width: 1024px) {
+@media (max-width: 1024px) {
 
-            .top-header li p, .top-header li a{
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .main-header {
-                padding: 10px 15px;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .main-header img {
-                width: 50px;
-            }
-
-            .main-header .logo p{
-                font-size: 1.5em;
-            }
-
-            .main-header nav {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-
-            .main-header a {
-                padding: 10px;
-                font-size: 1.1em;
-            }
-
-            .hero-section {
-                background-size: contain; /* Ensures the background fits within the container */
-                background-position: top; /* Aligns the background to the top */
-                height: 90vh; /* Adjust the height to be responsive on smaller screens */
-            }
-
-            .hero-section h1 {
-                font-size: 1.5em;
-                margin: 35px 0;
-            }
-
-            .hero-section p {
-                font-size: 0.9em;
-                margin: -20px 0;
-            }
-
-            .adv {
-        height: 75vh; /* Adjust the height for tablets */
-        margin: -80px 0; /* Adjust margins to fit better */
-    }
-
-    .slideshow-container {
-        height: 100%; /* Ensure the slideshow container fills the section */
-    }
-
-    .slide img {
-        height: auto;
-        width: 100%; /* Ensure images fit within the container */
-        object-fit: cover; /* Crop the image to fit the container, if necessary */
-    }
+.top-header li p, .top-header li a {
+    flex-direction: column;
+    align-items: flex-start;
 }
 
+.main-header {
+    padding: 10px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
+.main-header img {
+    width: 100px;
+    transition: width 0.3s;
+}
 
-        @media (max-width: 768px) {
+.main-header nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
 
-            .top-header li p, .top-header li a{
-                padding: 0 5px;
-                margin: 5px -10px;
-                font-size: 12px;
-                flex-direction: column;
-                align-items: flex-start;
-            }
+.main-header a {
+    padding: 10px;
+    font-size: 1.0em;
+}
 
-            .main-header img {
-                width: 60px;
-            }
+.main-header p {
+    font-size: 1.0em;
+}
 
-            .main-header p {
-                font-size: 0.7em;
-            }
+.hero-section {
+    background-size: contain;
+    background-position: top;
+    height: 90vh;
+}
 
-            .main-header a {
-                padding: 8px;
-                font-size: 1em;
-            }
+.hero-section h1 {
+    font-size: 1.5em;
+    margin: 35px 0;
+}
 
-            .hero-section {
-                height: 85vh; /* Further adjust height for very small screens */
-            }
+.hero-section p {
+    font-size: 0.9em;
+    margin: -20px 0;
+}
 
-            .hero-section h1 {
-                font-size: 1.2em;
-                margin: 25px 0;
-            }
+.adv {
+    height: 75vh;
+    margin: -80px 0;
+}
 
-            .hero-section p {
-                font-size: 0.8em;
-                margin: -30px 0;
-            }
+.slideshow-container {
+    height: 100%;
+}
 
-            .contact-info{
-                flex-direction: row;
-            }
+.slide img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+}
 
-            .contact-info .location iframe{
-                height: 300px;
-            }
+@media (max-width: 768px) {
 
-            .adv {
-        height: 60vh; /* Adjust the height further for smaller screens */
-        margin: 0;
-    }
+.top-header li p, .top-header li a {
+    padding: 0 5px;
+    margin: 10px -10px;
+    font-size: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
-    .slideshow-container {
-        height: 100%;
-    }
+.main-header p {
+    font-size: 0.7em;
+}
 
-    .slide img {
-        height: auto;
-        width: 100%;
-        object-fit: cover;
-    }
+.main-header a {
+    padding: 8px;
+    font-size: 0.7em;
+}
 
-    .prev, .next {
-        font-size: 14px; /* Make the navigation buttons smaller */
-        padding: 5px;
-    }
+.hero-section {
+    height: 85vh;
+}
 
-    .dot-container {
-        bottom: 15px; /* Adjust the dot position */
-    }
+.hero-section h1 {
+    font-size: 1.2em;
+    margin: 25px 0;
+}
 
-    .dot {
-        height: 8px;
-        width: 8px;
-        margin: 0 3px;
-    }
+.hero-section p {
+    font-size: 0.8em;
+    margin: -30px 0;
+}
 
-        }
+.contact-info {
+    flex-direction: row;
+}
+
+.contact-info .location iframe {
+    height: 300px;
+}
+
+.adv {
+    height: 60vh;
+    margin: 0;
+}
+
+.slideshow-container {
+    height: 100%;
+}
+
+.slide img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    font-size: 14px;
+    padding: 5px;
+}
+
+.dot-container {
+    bottom: 15px;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 3px;
+}
+}
 
         /* Slideshow */
 .slideshow-container {
