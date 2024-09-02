@@ -541,14 +541,15 @@ footer p {
 }
 
 @media (max-width: 768px) {
+    .top-header li p, .top-header li a {
+        padding: 0 10px;
+        margin: 10px 0;
+        font-size: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left; /* Align text to the left */
+    }
 
-.top-header li p, .top-header li a {
-    padding: 0 10px;
-    margin: 10px -10px;
-    font-size: 8px;
-    flex-direction: column;
-    align-items: flex-start;
-}
 
 .main-header p {
     font-size: 1.1em;
