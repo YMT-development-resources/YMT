@@ -469,168 +469,165 @@ color: #40679E;
 
 
 @media (max-width: 1024px) {
+    .top-header li p, .top-header li a {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.top-header li p, .top-header li a {
-flex-direction: column;
-align-items: flex-start;
-}
+    .main-header {
+        padding: 10px 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.main-header {
-padding: 10px 15px;
-flex-direction: column;
-align-items: flex-start;
-}
+    .main-header img {
+        width: 100px;
+        transition: width 0.3s ease-in-out;
+    }
 
-.main-header img {
-width: 100px;
-transition: width 0.3s ease-in-out;
-}
+    .main-header nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
 
-.main-header nav {
-flex-direction: column;
-align-items: flex-start;
-gap: 10px;
-}
+    .main-header a, .main-header p {
+        font-size: 1em;
+        padding: 10px;
+    }
 
-.main-header a {
-padding: 10px;
-font-size: 1em;
-}
+    .hero-section {
+        height: 100vh; /* Full height of the viewport */
+        position: absolute;
+        bottom: 10px;
+        overflow: hidden;
+    }
 
-.main-header p {
-font-size: 1em;
-}
+    .hero-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 
-.hero-section {
-height: 100vh; /* Sets the height to 100% of the viewport height */
-position: relative;
-overflow: hidden;
-}
+    .hero-section h1 {
+        font-size: 2em;
+        position: relative;
+        z-index: 2;
+    }
 
-.hero-section img {
-width: 100%;
-height: 100%;
-object-fit: cover; /* Ensures the image covers the entire section */
-position: absolute;
-top: 0;
-left: 0;
-}
+    .hero-section p {
+        font-size: 1.1em;
+        position: relative;
+        z-index: 2;
+    }
 
-.hero-section h1 {
-font-size: 2em;
-position: relative; /* Ensures text is positioned over the image */
-z-index: 2;
-}
+    .adv {
+        height: 75vh;
+        transition: transform 0.3s ease-in-out;
+    }
 
-.hero-section p {
-font-size: 1.1em;
-position: relative; /* Ensures text is positioned over the image */
-z-index: 2;
-}
+    .slideshow-container {
+        height: 100%;
+    }
 
-.adv {
-height: 75vh;
-transition: transform 0.3s ease-in-out;
-}
-
-.slideshow-container {
-height: 100%;
-}
-
-.slide img {
-height: auto;
-width: 100%;
-object-fit: cover;
-}
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 @media (max-width: 768px) {
+    .top-header li p, .top-header li a {
+        padding: 0 10px;
+        margin: 10px -16px;
+        font-size: 10px;
+        flex-direction: row;
+        align-items: flex-start;
+    }
 
-.top-header li p, .top-header li a {
-padding: 0 10px;
-margin: 10px -16px;
-font-size: 10px;
-flex-direction: row;
-align-items: flex-start;
+    .main-header p {
+        font-size: 1.1em;
+    }
+
+    .main-header a {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .hero-section {
+        height: 250px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-section img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        position: relative;
+    }
+
+    .hero-section h1 {
+        font-size: 1em;
+        margin: 25px 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-section p {
+        font-size: 0.8em;
+        margin: -30px 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .contact-info {
+        flex-direction: row;
+    }
+
+    .contact-info .location iframe {
+        height: 300px;
+    }
+
+    .adv {
+        height: 47vh;
+        transform: scale(0.95);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .slideshow-container {
+        height: 100%;
+    }
+
+    .slide img {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .prev, .next {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .dot-container {
+        bottom: 15px;
+    }
+
+    .dot {
+        height: 8px;
+        width: 8px;
+        margin: 0 3px;
+    }
 }
 
-.main-header p {
-font-size: 1.1em;
-}
 
-.main-header a {
-padding: 8px;
-font-size: 0.9em;
-}
 
-.hero-section {
-    height: 40vh; /* Allow the height to adjust automatically based on content */
-    width: 100%; /* Make sure the section takes up the full width of the screen */
-    position: relative;
-    overflow: hidden;
-    right: 3%;
-}
-
-.hero-section img {
-    width: 150%;
-    height: auto; /* Keep the image height proportional */
-    object-fit: contain; /* Ensures the entire image is visible without cropping */
-    position: relative; /* Makes sure the image is aligned within the container */
-}
-
-.hero-section h1 {
-font-size: 1.0em;
-margin: 25px 0;
-position: relative; /* Ensures text is positioned over the image */
-z-index: 2;
-}
-
-.hero-section p {
-font-size:0.8em;
-margin: -30px;
-position: relative; /* Ensures text is positioned over the image */
-z-index: 2;
-}
-
-.contact-info {
-flex-direction: row;
-}
-
-.contact-info .location iframe {
-height: 300px;
-}
-
-.adv {
-height: 47vh;
-transform: scale(0.95);
-transition: transform 0.3s ease-in-out;
-}
-
-.slideshow-container {
-height: 100%;
-}
-
-.slide img {
-height: auto;
-width: 100%;
-object-fit: cover;
-}
-
-.prev, .next {
-font-size: 14px;
-padding: 5px;
-}
-
-.dot-container {
-bottom: 15px;
-}
-
-.dot {
-height: 8px;
-width: 8px;
-margin: 0 3px;
-}
-}
 
 
 /* Slideshow */
