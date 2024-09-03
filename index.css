@@ -568,10 +568,11 @@ font-size: 0.9em;
     width: 100%; /* Make sure the section takes up the full width of the screen */
     position: relative;
     overflow: hidden;
+    right: 3%;
 }
 
 .hero-section img {
-    width: 100%;
+    width: 150%;
     height: auto; /* Keep the image height proportional */
     object-fit: contain; /* Ensures the entire image is visible without cropping */
     position: relative; /* Makes sure the image is aligned within the container */
