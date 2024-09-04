@@ -403,69 +403,69 @@ height: 200px;
 
 /* Footer */
 footer {
-background-color: #494949;
-color: white;
-text-align: center;
-padding: 20px 10px;
-width: 100%;
-margin-top: auto;
-}
-
-footer h2 {
-color: #fff;
-margin-bottom: 10px;
-}
-
-footer h3 {
-color: #fff;
-margin-bottom: 10px;
-}
-
-footer p {
-margin: 5px 0;
-font-size: 1em;
-color: #ccc;
-}
-
-.contact-info {
-gap: 20px;
-margin-bottom: 20px;
-}
-
-.contact-info .location,
-.contact-info .working-hours {
-flex: 1;
-display: inline-block;
-margin: 0 100px;
-}
-
-.contact-info .working-hours{
-position: relative;
-bottom: 10px;
-}
-
-.contact-info .working-hours a{
-color: #f0f0f0; 
-cursor: pointer;
-text-decoration-line: underline;
-
-}
-
-.contact-info .working-hours .social-icons {
-margin: 20px 0;
-}
-
-.contact-info .working-hours .social-icon {
-margin: 0 10px;
-text-decoration: none;
-color: white;
-font-size: 24px;
-transition: color 0.3s ease;
-}
-
-.contact-info .working-hours .social-icon:hover {
-color: #40679E;
-}
+    background-color: #494949;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    width: 100%;
+    margin-top: auto;
+    }
+    
+    footer h2 {
+    color: #fff;
+    margin-bottom: 10px;
+    }
+    
+    footer h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    }
+    
+    footer p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #ccc;
+    }
+    
+    .contact-info {
+    gap: 20px;
+    margin-bottom: 20px;
+    }
+    
+    .contact-info .location,
+    .contact-info .working-hours {
+    flex: 1;
+    display: inline-block;
+    margin: 0 100px;
+    }
+    
+    .contact-info .working-hours{
+    position: relative;
+    bottom: 10px;
+    }
+    
+    .contact-info .working-hours a{
+    color: #f0f0f0; 
+    cursor: pointer;
+    text-decoration-line: underline;
+    
+    }
+    
+    .contact-info .working-hours .social-icons {
+    margin: 20px 0;
+    }
+    
+    .contact-info .working-hours .social-icon {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+    }
+    
+    .contact-info .working-hours .social-icon:hover {
+    color: #40679E;
+    }
 
 
 @media (max-width: 1024px) {
