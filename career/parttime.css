@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
@@ -222,4 +222,10 @@ body, html {
 .slide-in.active {
     opacity: 1;
     transform: translateX(0);
+}
+
+button{
+    width: auto;
+    height: 70px;
+    font-size: 18px;
 }
