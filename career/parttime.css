@@ -207,7 +207,7 @@ body, html {
         display: block;
         height: auto;
         width: 2px;
-        background-color: #007BFF;
+        background-color: #40679E;
         align-self: stretch;
     }
 }
@@ -243,9 +243,9 @@ body, html {
   
   .button-51 {
     background-color: transparent;
-    border: 1px solid #266DB6;
+    border: 1px solid #1B3C73;
     box-sizing: border-box;
-    color: #00132C;
+    color: #fff;
     font-family: "Avenir Next LT W01 Bold", sans-serif;
     font-size: 16px;
     font-weight: 700;
@@ -271,7 +271,7 @@ body, html {
   }
   
   .button-51:before {
-    background-color: #D5EDF6;
+    background-color: #40679E;
     content: "";
     height: calc(100% + 3px);
     position: absolute;
@@ -283,7 +283,7 @@ body, html {
   }
   
   .button-51:hover:before {
-    background-color: #6DCFF6;
+    background-color: #1B3C73;
   }
   
   @media (min-width: 768px) {
