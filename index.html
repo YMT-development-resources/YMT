@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" sizes="64x64" href="ymt_icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="index.css">
+    
 
 </head>
 <body>
@@ -29,8 +30,7 @@
                 <p>YMT Development Resources</p>
             </div>
             <nav>
-                <a href="#"><b>Home</b></a>
-                <a href="#aboutus"><b>About</b></a>
+                <a href="#aboutus"><b>About Us</b></a>
                 <a href="#service"><b>Services</b></a>
                 <a href="#career"><b>Careers</b></a>
                 <a href="#contact"><b>Contact</b></a>
@@ -171,11 +171,7 @@
                     <a href="https://www.linkedin.com/company/ymt-development-resources-create-your-career-from-here/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://www.tiktok.com/@ymtdr?_t=8pD05zIPdQm&_r=1" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
                 </div>
-                  <div class="languageSection">
-                    <a href="#" language="english" class="active">ENG</a>
-                    <a href="#" language="中文">中文</a>
-                </div>
-    
+                <div id="google_translate_element"></div>
             </div>
         </div>
     
@@ -271,6 +267,22 @@
 
         // Add event listener to close button
         document.querySelector('.close').addEventListener('click', closeModal);
+
+
+    </script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+    </script>
+
+    <script type="text/javascript" 
+        src=
+    "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
     </script>
         
 </body>
