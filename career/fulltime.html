@@ -116,8 +116,7 @@
                     <a href="https://www.tiktok.com/@ymtdr?_t=8pD05zIPdQm&_r=1" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
                 </div>
                   <div class="languageSection">
-                    <a href="#" language="english" class="active">ENG</a>
-                    <a href="#" language="中文">中文</a>
+                    <div id="google_translate_element"></div>
                 </div>
     
             </div>
@@ -125,5 +124,17 @@
     
         <p>&copy; 2024 All Rights Reserved</p>
     </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+    </script>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>
