@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Top Header Styling */
@@ -123,6 +124,7 @@ vertical-align: middle;
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Main Content */
@@ -139,7 +141,8 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     height: 100vh;
     display: flex;
     flex-direction: column;
