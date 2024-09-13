@@ -474,158 +474,191 @@ footer {
     }
 
 
-@media (max-width: 1024px) {
-    .top-header li p, .top-header li a {
-        flex-direction: column;
-        align-items: flex-start;
+    @media (max-width: 1024px) {
+        .top-header li p, .top-header li a {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .main-header {
+            padding: 10px 15px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .main-header img {
+            width: 100px;
+            transition: width 0.3s ease-in-out;
+        }
+    
+        .main-header nav {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+    
+        .main-header a, .main-header p {
+            font-size: 1em;
+            padding: 10px;
+        }
+    
+        .hero-section {
+            height: 80vh;
+        }
+    
+        .hero-section img {
+            object-fit: contain; /* Ensure full image is displayed without cropping */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    
+        .hero-section h1 {
+            font-size: 2em;
+        }
+    
+        .hero-section p {
+            font-size: 1.2em;
+        }
+    
+        .adv {
+            height: 75vh;
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .slideshow-container {
+            height: 100%;
+        }
+    
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
-
-    .main-header {
-        padding: 10px 15px;
-        flex-direction: column;
-        align-items: flex-start;
+    
+    /* Media Query for devices with a width of 768px or less */
+    @media (max-width: 768px) {
+        .top-header li p, .top-header li a {
+            padding: 0 10px;
+            margin: 10px -16px;
+            font-size: 10px;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    
+        .main-header p {
+            font-size: 1.1em;
+        }
+    
+        .main-header a {
+            padding: 8px;
+            font-size: 0.9em;
+        }
+    
+        .hero-section {
+            height: 350px;
+            background-size: contain;
+            background-position: center;
+        }
+    
+        .hero-section img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            position: relative;
+        }
+    
+        .hero-section h1 {
+            font-size: 1em;
+            margin: 25px 0;
+            position: relative;
+            z-index: 2;
+        }
+    
+        .hero-section p {
+            font-size: 0.8em;
+            margin: -30px 0;
+            position: relative;
+            z-index: 2;
+        }
+    
+        .contact-info {
+            flex-direction: row;
+        }
+    
+        .contact-info .location iframe {
+            height: 300px;
+        }
+    
+        .adv {
+            height: 47vh;
+            transform: scale(0.95);
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .slideshow-container {
+            height: 100%;
+        }
+    
+        .slide img {
+            height: auto;
+            width: 100%;
+            object-fit: cover;
+        }
+    
+        .prev, .next {
+            font-size: 14px;
+            padding: 5px;
+        }
+    
+        .dot-container {
+            bottom: 15px;
+        }
+    
+        .dot {
+            height: 8px;
+            width: 8px;
+            margin: 0 3px;
+        }
     }
-
-    .main-header img {
-        width: 100px;
-        transition: width 0.3s ease-in-out;
+    
+    /* Media Query for devices with a width of 480px or less (small phones) */
+    @media (max-width: 480px) {
+        .hero-section {
+            height: 250px; /* Adjust hero section height for smaller screens */
+        }
+    
+        .hero-section img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    
+        .hero-section h1 {
+            font-size: 0.9em;
+            margin: 20px 0;
+        }
+    
+        .hero-section p {
+            font-size: 0.7em;
+            margin: 0 0 10px;
+        }
+    
+        .main-header img {
+            width: 80px; /* Adjust logo size */
+        }
+    
+        .adv {
+            height: auto;
+        }
+    
+        .slide img {
+            height: auto;
+            width: 100%;
+            object-fit: cover;
+        }
     }
-
-    .main-header nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .main-header a, .main-header p {
-        font-size: 1em;
-        padding: 10px;
-    }
-
-    .hero-section {
-        height: 80vh;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .hero-section img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    .hero-section h1 {
-        font-size: 2em;
-    }
-
-    .hero-section p {
-        font-size: 1.2em;
-    }
-
-    .adv {
-        height: 75vh;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .slideshow-container {
-        height: 100%;
-    }
-
-    .slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-@media (max-width: 768px) {
-    .top-header li p, .top-header li a {
-        padding: 0 10px;
-        margin: 10px -16px;
-        font-size: 10px;
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .main-header p {
-        font-size: 1.1em;
-    }
-
-    .main-header a {
-        padding: 8px;
-        font-size: 0.9em;
-    }
-
-    .hero-section {
-        height: 350px;
-        background-size: contain;
-        background-position: center;
-    }
-
-    .hero-section img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        position: relative;
-    }
-
-    .hero-section h1 {
-        font-size: 1em;
-        margin: 25px 0;
-        position: relative;
-        z-index: 2;
-    }
-
-    .hero-section p {
-        font-size: 0.8em;
-        margin: -30px 0;
-        position: relative;
-        z-index: 2;
-    }
-
-    .contact-info {
-        flex-direction: row;
-    }
-
-    .contact-info .location iframe {
-        height: 300px;
-    }
-
-    .adv {
-        height: 47vh;
-        transform: scale(0.95);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .slideshow-container {
-        height: 100%;
-    }
-
-    .slide img {
-        height: auto;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .prev, .next {
-        font-size: 14px;
-        padding: 5px;
-    }
-
-    .dot-container {
-        bottom: 15px;
-    }
-
-    .dot {
-        height: 8px;
-        width: 8px;
-        margin: 0 3px;
-    }
-}
-
 
 /* Slideshow */
 .slideshow-container {
