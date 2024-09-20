@@ -1,2 +1,0 @@
-User-agent: *
-Allow: /   # 这会阻止所有抓取
