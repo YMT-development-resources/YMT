@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /   # 这会阻止所有抓取
+Allow: /   # 这会阻止所有抓取
