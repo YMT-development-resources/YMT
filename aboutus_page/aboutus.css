@@ -241,11 +241,58 @@ footer {
     }
 
 
-  @media screen and (max-width: 650px) {
-    .row {
-      flex-direction: column;
-    }
-    .about-section {
-      padding: 30px;
-    }
+/* Media Queries for Smaller Devices */
+@media screen and (max-width: 1024px) {
+  .text-content {
+    max-width: 100%; /* Take full width on smaller screens */
   }
+
+  .column {
+    flex: 0 0 48%; /* Two cards per row */
+  }
+
+  .image-container {
+    height: 250px; /* Reduce image size */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .column {
+    flex: 0 0 100%; /* One card per row */
+    max-width: 100%;
+  }
+
+  .image-container {
+    height: 700px; /* Smaller image for smaller screens */
+  }
+
+  .text-content h1 {
+    font-size: 2em;
+  }
+
+  .text-content p {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-section {
+    padding: 20px;
+  }
+
+  .text-content h1 {
+    font-size: 1.5em;
+  }
+
+  .text-content p {
+    font-size: 0.9em;
+  }
+}
