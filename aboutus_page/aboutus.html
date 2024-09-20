@@ -1,128 +1,154 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
+<meta name="google-site-verification" content="5NVBfSbbo56RUzybGjk6BuLlr4FIg57AR2rIhWZ5QNE" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="aboutus.css">
 
-html {
-  box-sizing: border-box;
-}
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-}
-
-.about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #474e5d;
-  color: white;
-}
-
-.container {
-  padding: 0 16px;
-}
-
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.title {
-  color: grey;
-}
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-
-.button:hover {
-  background-color: #555;
-}
-
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
-</style>
 </head>
 <body>
 
-<div class="about-section">
-  <h1>About Us Page</h1>
-  <p>text</p>
-  <p>text</p>
-</div>
+  <div class="about-section">
+    <hr style="width: 100%; margin: 0 auto; border:2px #fff solid;margin-bottom: 50px;">
 
-<h2 style="text-align:center">Our Team</h2>
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <img src="Director image" alt="Director name" style="width:100%">
-      <div class="container">
-        <h2>Director name</h2>
-        <p class="title">Director</p>
-        <p>Some text</p>
-        <p>gmail.com</p>
-        <p><button class="button">Contact</button></p>
+    <div class="about-content">
+      <img src="ymt_address.jpeg" alt="YMT Address">
+      <div class="text-content">
+        <h1><b>YMT Development Resources</b></h1>
+        <p>YMT Development Resources is a financial planning specialist, licensed by Securities Commission of Malaysia, dedicated to providing individual and corporate financial planning solutions.</p>
+        <p> Our licensed Chartered Financial Consultants and Certified Financial Planners offer vast experience in helping individual families, businesses, and charities analyze their financial situations and find the best path to success. We prioritize knowledge and offer holistic financial planning tailored to each stage of life.</p>
+        <br>
+        <h3>BELIEVE IN BUILDING BETTER FINANCIAL FUTURES </h3>
+        <h3>NO MATTER WHAT STAGE OF LIFE YOU ARE AT</h3>    
       </div>
     </div>
-  </div>
 
-  <div class="column">
-    <div class="card">
-      <img src="Director image" alt="Director name" style="width:100%">
-      <div class="container">
-        <h2>Director name</h2>
-        <p class="title">Director</p>
-        <p>Some text</p>
-        <p>gmail.com</p>
-        <p><button class="button">Contact</button></p>
+    <hr style="width: 100%; margin: 0 auto; border:2px #fff solid;margin-top: 50px;">
+
+  </div>
+  <h1 style="text-align: center; font-size: 48px; margin-top: 5%; margin-bottom: 5%;">Our Team</h1>
+
+  <div class="row">
+    <div class="column">
+      <div class="card" onmouseover="showImage(this)" onmouseout="hideImage(this)">
+        <div class="image-container">
+          <img class="default-img" src="Ms.Marcus.jpg" alt="Marcus Moo Wei Ming">
+          <img class="hover-img" src="marcus.remove.png" alt="Marcus Moo Wei Ming" style="opacity: 0;">
+        </div>
+        <div class="container">
+          <h2>Marcus Moo Wei Ming (Director)</h2>
+          <p class="title">Started in 2005 years</p>
+          <p>As long as the service is good, the customer base will grow, referrals will increase, and the business scope will become wider and wider.</p>
+          <p><a href="https://wa.me/+60127840889" class="button">Contact</a></p>
+        </div>
       </div>
     </div>
-  </div>
   
-  <div class="column">
-    <div class="card">
-      <img src="Director image" alt="Director name" style="width:100%">
-      <div class="container">
-        <h2>Director name</h2>
-        <p class="title">Director</p>
-        <p>Some text</p>
-        <p>gmail.com</p>
-        <p><button class="button">Contact</button></p>
+    <div class="column">
+      <div class="card" onmouseover="showImage(this)" onmouseout="hideImage(this)">
+        <div class="image-container">
+          <img class="default-img" src="Mrs.CCYF.png" alt="Cheng Chian Yan Fong">
+          <img class="hover-img" src="ccyf.remove.png" alt="Cheng Chian Yan Fong" style="opacity: 0;">
+        </div>
+        <div class="container">
+          <h2>Cheng Chian Yan Fong (Director)</h2>
+          <p class="title">Started in 2000 years</p>
+          <p>One of the biggest advantages of being a financial advisor is that they have a high degree of time autonomy, which is exactly what most women need to do to take care of their families. They can flexibly arrange their time and balance their career and family.</p>
+          <p><a href="https://wa.me/+60127107005" class="button">Contact</a></p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card" onmouseover="showImage(this)" onmouseout="hideImage(this)">
+        <div class="image-container">
+          <img class="default-img" src="Mrs.Shylee.jpg" alt="Shylee Tee">
+          <img class="hover-img" src="shylee.remove.png" alt="Shylee Tee" style="opacity: 0;"> 
+        </div>
+        <div class="container">
+          <h2>Shylee Tee (Director)</h2>
+          <p class="title">Started in 2004 years</p>
+          <p>Keep your wallet strong and keep your happiness stable. Be truly independent in economy, ability, thought and spirit. A woman's self-knowledge improves her life. Be a happy woman and learn to experience life.</p>
+          <p><a href="https://wa.me/+60149659322" class="button">Contact</a></p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card" onmouseover="showImage(this)" onmouseout="hideImage(this)">
+        <div class="image-container">
+          <img class="default-img" src="Ms.Yap.jpg" alt="Yap Chin Choong">
+          <img class="hover-img" src="yap.remove.png" alt="Yap Chin Choong" style="opacity: 0;">
+        </div>
+        <div class="container">
+          <h2>Yap Chin Choong (Director)</h2>
+          <p class="title">Started in 2000 years</p>
+          <p>Become a financial advisor worthy of clients' trust, and pursue financial freedom with clients for the long-term financial security of their families.</p>
+          <p><a href="https://wa.me/+60127070108" class="button">Contact</a></p>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
+  <footer id="contact">
+    <h2>YMT Development Resources</h2>
+    <br>
+    <div class="contact-info">
+        <div class="location">
+            <h3>We Are Located At</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.3915332649226!2d103.79095327447169!3d1.5323345609631556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da6dab8046e945%3A0x2d5a9bfe0e3a1049!2sYMT%20Development%20Resources!5e0!3m2!1sen!2smy!4v1723793896548!5m2!1sen!2smy" 
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <p>40-01 & 40-02, Jalan Ros Merah 2/7, Taman Johor Jaya, 81100 Johor Bahru, Johor</p>
+        </div>
+        <div class="working-hours">
+            <h3>Working Hours</h3>
+            <p>Monday - Friday: 8:30 AM - 5:30 PM</p>
+            <p>Saturday - Sunday: Closed</p>
+            <h3>Contact Number</h3>
+            <p>07-288 0921</p>
+            <h3>Email Address</h3>
+            <a onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=contact@ymtdevelopmentjj@gmail.com');">ymtdevelopmentjj@gmail.com</a>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/ymtdr?mibextid=LQQJ4d" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/ymt_development_resources?igsh=aHlrcTJ3aGFvMjUx" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://g.co/kgs/zcfDfrV" target="_blank" class="social-icon"><i class="fab fa-google"></i></a>
+                <a href="https://www.linkedin.com/company/ymt-development-resources-create-your-career-from-here/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.tiktok.com/@ymtdr?_t=8pD05zIPdQm&_r=1" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div id="google_translate_element"></div>
+        </div>
+    </div>
+
+    <p>&copy; 2024 YMT Development Resources</p>
+</footer>
+
+  
 
 </body>
+<script>
+function showImage(card) {
+  const hoverImage = card.querySelector('.hover-img');
+  hoverImage.style.opacity = '1';
+}
+
+function hideImage(card) {
+  const hoverImage = card.querySelector('.hover-img');
+  hoverImage.style.opacity = '0'; 
+}
+
+</script>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+          {pageLanguage: 'en'},
+          'google_translate_element'
+      );
+  }
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </html>
