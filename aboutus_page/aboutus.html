@@ -95,6 +95,31 @@
     </div>
   </div>
 
+  <h1 style="text-align: center; font-size: 36px; margin-top: 5%;">Our Gallery</h1>
+  <div class="gallery">
+    <!-- First set of images (always visible) -->
+    <div class="gallery-row">
+        <img src="Group Photo 1.jpg" alt="Image 1" style="width: 450px; margin: 10px;">
+        <img src="Group Photo 2.jpg" alt="Image 2" style="width: 450px; margin: 10px;">
+        <img src="Group Photo 3.jpg" alt="Image 3" style="width: 450px; margin: 10px;">
+    </div>
+
+    <!-- Hidden images (revealed on button click) -->
+    <div class="gallery-row hidden" id="more-pictures">
+        <img src="Group Photo 4.jpg" alt="Image 4" style="width: 450px; margin: 10px;">
+        <img src="pic6.jpg" alt="Image 6">
+        <img src="pic7.jpg" alt="Image 7">
+        <img src="pic8.jpg" alt="Image 8">
+    </div>
+
+
+  <h2 style="text-align: center; font-size: 36px; margin-top: 5%;">Watch Our Story</h2>
+
+<div class="video-section" style="text-align: center; margin-bottom: 5%;">
+  <iframe width="600" height="350" src="Group Video.mp4" title="YMT Development Resources Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
   <footer id="contact">
     <h2>YMT Development Resources</h2>
     <br>
@@ -151,6 +176,15 @@ function hideImage(card) {
   hoverImage.style.opacity = '0'; 
 }
 
+
+function showMore() {
+    var morePictures = document.getElementById("more-pictures");
+    var showMoreBtn = document.getElementById("showMoreBtn");
+
+    morePictures.classList.toggle("hidden");
+    showMoreBtn.innerHTML = morePictures.classList.contains("hidden") ? "Show More" : "Show Less";
+}
+document.getElementById("showMoreBtn").addEventListener("click",showMore)
 </script>
 
 <script type="text/javascript">
