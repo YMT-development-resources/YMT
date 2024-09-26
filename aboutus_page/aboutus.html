@@ -99,19 +99,20 @@
   <div class="gallery">
     <!-- First set of images (always visible) -->
     <div class="gallery-row">
-        <img src="Group Photo 1.jpg" alt="Image 1" style="width: 450px; margin: 10px;">
-        <img src="Group Photo 2.jpg" alt="Image 2" style="width: 450px; margin: 10px;">
-        <img src="Group Photo 3.jpg" alt="Image 3" style="width: 450px; margin: 10px;">
+      <img src="Group Photo 1.jpg" alt="Image 1">
+      <img src="Group Photo 2.jpg" alt="Image 2">
+      <img src="Group Photo 3.jpg" alt="Image 3">
     </div>
-
+  
     <!-- Hidden images (revealed on button click) -->
     <div class="gallery-row hidden" id="more-pictures">
-        <img src="Group Photo 4.jpg" alt="Image 4" style="width: 450px; margin: 10px;">
-        <img src="pic6.jpg" alt="Image 6">
-        <img src="pic7.jpg" alt="Image 7">
-        <img src="pic8.jpg" alt="Image 8">
+      <img src="Group Photo 4.jpg" alt="Image 4">
+      <img src="Group Photo 5.jpg" alt="Image 5">
+      <img src="Group Photo 6.jpg" alt="Image 6">
     </div>
-
+  
+    <button id="showMoreBtn">Show More</button>
+  </div>  
 
   <h2 style="text-align: center; font-size: 36px; margin-top: 5%;">Watch Our Story</h2>
 
@@ -184,7 +185,8 @@ function showMore() {
     morePictures.classList.toggle("hidden");
     showMoreBtn.innerHTML = morePictures.classList.contains("hidden") ? "Show More" : "Show Less";
 }
-document.getElementById("showMoreBtn").addEventListener("click",showMore)
+
+document.getElementById("showMoreBtn").addEventListener("click", showMore);
 </script>
 
 <script type="text/javascript">
