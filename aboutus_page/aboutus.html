@@ -167,6 +167,32 @@
 
 </body>
 <script>
+
+// JavaScript to add the 'show' class when the card comes into view
+function showCardsOnScroll() {
+  const cards = document.querySelectorAll('.card');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // Stop observing once the card is shown
+      }
+    });
+  }, {
+    threshold: 0.2 // Show the card when 20% of it is visible
+  });
+
+  cards.forEach(card => {
+    observer.observe(card);
+  });
+}
+
+// Run the function when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', showCardsOnScroll);
+
+
+
 function showImage(card) {
   const hoverImage = card.querySelector('.hover-img');
   hoverImage.style.opacity = '1';

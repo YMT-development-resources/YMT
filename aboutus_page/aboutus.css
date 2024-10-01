@@ -172,6 +172,18 @@ body {
   .button:hover {
     background-color: #1B3C73;
   }
+
+.card {
+  opacity: 0;
+  transform: translateY(20px); /* Start slightly below the initial position */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth transition for opacity and movement */
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0); /* Move to the original position */
+}
+
     
   .gallery {
     width: 100%;
