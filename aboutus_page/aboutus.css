@@ -189,7 +189,7 @@ body {
   
   .gallery-row img {
     width: 100%; /* Full width by default */
-    max-width: 150px; /* Set max width for images */
+    max-width: 350px; /* Set max width for images */
     height: auto;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -363,7 +363,7 @@ footer {
   }
 
   .gallery-row img {
-    max-width: 120px; /* Reduce image size for medium-small devices */
+    max-width: 250px; /* Reduce image size for medium-small devices */
   }
 
   button {
@@ -394,7 +394,7 @@ footer {
   }
 
   .gallery-row img {
-    max-width: 100px; /* Further reduce image size for very small devices */
+    max-width: 150px; /* Further reduce image size for very small devices */
   }
 
   button {
