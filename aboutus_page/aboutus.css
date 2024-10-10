@@ -312,21 +312,22 @@ footer {
   }
   
   .footer-menu {
-      padding: 20px 0; 
-      text-align: center; 
-  }
-  
-  .footer-menu nav a {
-      color: white; 
-      text-decoration: none; 
-      margin: 0 15px; 
-      font-size: 16px; 
-      font-weight: bold;
-  }
-  
-  .footer-menu nav a:hover {
-      color: #40679E; 
-  }
+    padding: 20px 0; 
+    text-align: center; 
+}
+
+.footer-menu nav a {
+    color: white; 
+    text-decoration: none; 
+    margin: 0 15px; 
+    font-size: 16px; 
+    font-weight: bold;
+}
+
+.footer-menu nav a:hover {
+    color: #40679E; 
+}
+
   
 
 /* Media Queries for Smaller Devices */
