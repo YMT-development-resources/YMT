@@ -275,6 +275,10 @@ body, html {
     height: auto;
     margin-top: 2%;
     margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
   
   .button-51:hover,
