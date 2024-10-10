@@ -12,7 +12,7 @@ body {
     overflow-x: hidden;
 }
 
-/* General styling for the top header */
+/* Top Header Styling */
 .top-header {
     background-color: #1B3C73; 
     padding: 0; 
@@ -74,6 +74,7 @@ body {
     .top-header ul {
         flex-direction: column; /* Stack items vertically */
         gap: 10px; /* Reduce space between items */
+        justify-content: flex-start; /* Align items to the left */
     }
 
     .top-header ul li a {
@@ -85,11 +86,14 @@ body {
         margin-right: 5px; /* Adjust space between icon and text */
     }
 
+    .top-header ul li p {
+        font-size: 12px; /* Adjust font size of text */
+    }
+
     .top-header {
         padding: 10px; /* Add some padding for smaller screens */
     }
 }
-
 
 
 /* Main-eader */
