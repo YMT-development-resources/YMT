@@ -12,88 +12,61 @@ body {
     overflow-x: hidden;
 }
 
-/* General top header styling */
+/* Top Header Styling */
 .top-header {
-    background-color: #4C0013; /* Dark maroon background */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    color: white;
-    font-family: Arial, sans-serif;
+background-color: #1B3C73; 
+padding:0; 
 }
 
-/* Contact info styling */
-.contact-info {
-    display: flex;
-    gap: 20px; /* Space between contact items */
+.top-header p{
+color: white;
+position: inherit;
 }
 
-.contact-info p {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    font-size: 14px;
+.top-header ul {
+list-style: none; /* Remove bullets from list */
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center; 
+align-items: center; /* Vertically center the items */
+gap: 20px; /* Space between the items */
 }
 
-.contact-info i {
-    margin-right: 5px;
-    font-size: 14px;
+.top-header ul li {
+display: flex; /* Align icons with text */
+align-items: center; /* Vertically center the text and icons */
 }
 
-/* Social icon styling */
-.social-icons {
-    display: flex;
-    gap: 15px;
+.top-header ul li a {
+color: white; /* White color for text and icons */
+text-decoration: none; /* Remove underline from links */
+font-size: 14px; /* Font size for text */
+display: flex; /* Align icon with text */
+align-items: center; /* Vertically center icon and text */
 }
 
-.social-icons a {
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
+.top-header ul li a .fab {
+margin-right: 8px; /* Space between icon and text */
+font-size: 18px; /* Font size for icons */
 }
 
-.social-icons a:hover {
-    color: #ccc; /* Light grey on hover */
+.top-header ul li a:hover {
+color: gray; /* Change color on hover */
 }
 
-/* Site links styling */
-.site-links {
-    display: flex;
-    gap: 20px;
+.top-header ul li a i {
+font-style: normal; /* Display text normally */
 }
 
-.site-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
+/* Icon-specific styling */
+.social-icon .fab {
+font-family: 'Font Awesome 5 Brands'; /* Ensure font is applied */
 }
 
-.site-links a:hover {
-    color: #ccc; /* Light grey on hover */
-}
-
-/* Media query for small screens */
-@media (max-width: 600px) {
-    .top-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .contact-info, .social-icons, .site-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .contact-info p, .site-links a {
-        font-size: 12px; /* Smaller font for mobile */
-    }
-
-    .social-icons a {
-        font-size: 16px;
-    }
+.social-icon i {
+display: inline-block;
+vertical-align: middle;
 }
 
 
